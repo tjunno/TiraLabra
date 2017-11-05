@@ -14,7 +14,7 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author polaris
+ * @author Tuomas Junno
  */
 public class NodeTest {
     
