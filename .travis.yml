@@ -4,4 +4,6 @@ jdk:
 before_install: cd labyrinth
 after_success:
   - bash <(curl -s https://codecov.io/bash)
+notifications:
+  email: false
   
