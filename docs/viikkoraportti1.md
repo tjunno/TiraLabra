@@ -6,7 +6,7 @@ Tällä viikolla on tullut aloitettua työn toteutuksen valmistelu pohtimalla mi
 
 ### Ajankäyttö
 
-Aikaa on kulunut kohtalaisia määriä algoritmeihin perehtymiseen ja sopivien valintaan. Luonnollisiksi vaihtoehdoiksi muodostuivat juuri A* ja Dijkstra. Aikaa on mennyt myös kehitysympäristön pystyttämiseen ja virittämiseen. Tällä viikolla on tullut opittua uusien ohjelmien käyttöä ja algoritmiikkaa. Myös muistin verestäminen tiettyjen asioiden, kuten Markdownin osalta on vienyt oman osansa ajasta. Aikaa on vienyt hyvin paljon myös tarkempi perehtyminen aika- ja tilavaativuuksiin. Perehtyminen kurssilla suositeltuhinin Gradleen ja Maveniin on myös vieneet aikansa. Aikaa on liennyt kuluneen noin 20 tuntia.
+Aikaa on kulunut kohtalaisia määriä algoritmeihin perehtymiseen ja sopivien valintaan. Luonnollisiksi vaihtoehdoiksi muodostuivat juuri A* ja Dijkstra. Aikaa on mennyt myös kehitysympäristön pystyttämiseen ja virittämiseen. Tällä viikolla on tullut opittua uusien ohjelmien käyttöä ja algoritmiikkaa. Myös muistin verestäminen tiettyjen asioiden, kuten Markdownin osalta on vienyt oman osansa ajasta. Aikaa on vienyt hyvin paljon myös tarkempi perehtyminen aika- ja tilavaativuuksiin. Perehtyminen kurssilla suositeltuhinin Gradleen ja Maveniin on myös vieneet aikansa. Hyvin paljon aikaa on vienyt myös Travisin ja Codecovin virittäminen. Aikaa on liennyt kuluneen noin 25 tuntia.
 
 ### Vaikeudet
 
