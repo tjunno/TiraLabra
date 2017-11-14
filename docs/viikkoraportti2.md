@@ -2,7 +2,7 @@
 
 ### Mitä on tullut tehtyä
 
-Tällä viikolla on tullut perehdyttyä moniin harjoitustyöhön liittyviin asioihin. Tärkeimpänä osana tietysti itse tietorakenteet ja niiden toteutuksen pohdiskelu. Konkreettista toteutusta on pyritty aloittamaan monilta eri osin, keskittyen enimmäkseen ydinrakenteen muodostamiseen ja tarpeellisten testiluokkien alustavaan luontiin.
+Tällä viikolla on tullut perehdyttyä moniin harjoitustyöhön liittyviin asioihin. Tärkeimpänä osana tietysti itse tietorakenteet ja niiden toteutuksen pohdiskelu. Konkreettista toteutusta on pyritty aloittamaan monilta eri osin, keskittyen enimmäkseen ydinrakenteen muodostamiseen ja tarpeellisten testiluokkien alustavaan luontiin. Kehitysympäristön pystytys on myös jatkunut.
 
 ### Ajankäyttö
 
