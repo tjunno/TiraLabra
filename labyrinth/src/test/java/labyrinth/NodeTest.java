@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package labyrinth;
 
 import org.junit.After;
@@ -49,11 +44,32 @@ public class NodeTest {
     @Test
     public void testSetEnd() {
         System.out.println("setEnd");
-        //Node goal = null;
-        //Node instance = null;
+        Node goal = null;
+        Node instance = null;
         //instance.setEnd(goal);
+    }
+
+    /**
+     * Test of setStart method, of class Node.
+     */
+    @Test
+    public void testSetStart() {
+       //System.out.println("setStart");
+        //int i = 0;
+        //Node instance = null;
+        //instance.setStart(i);
         // TODO review the generated test code and remove the default call to fail.
-        //fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of setPath method, of class Node.
+     */
+    @Test
+    public void testSetPath() {
+        //System.out.println("setPath");
+        //Node end = null;
+        //Node instance = null;
+        //instance.setPath(end);
     }
     
 }

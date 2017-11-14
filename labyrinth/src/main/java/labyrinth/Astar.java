@@ -88,4 +88,15 @@ public class Astar {
         this.open = new PriorityQueue<Node>();
         this.closed = new ArrayList<Node>();
     }
+    /**
+     * TBA
+     * 
+     */
+    
+    public void search(){
+        this.open.add(start);
+        this.start.setStart(0);
+        this.start.setPath(this.end);
+    }
+
 }

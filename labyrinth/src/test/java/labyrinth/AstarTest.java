@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package labyrinth;
 
 import org.junit.After;
@@ -39,6 +34,18 @@ public class AstarTest {
 
     @Test
     public void testSomeMethod() {
+        // TODO review the generated test code and remove the default call to fail.
+        //fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of search method, of class Astar.
+     */
+    @Test
+    public void testSearch() {
+        //System.out.println("search");
+        //Astar instance = null;
+        //instance.search();
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
     }
