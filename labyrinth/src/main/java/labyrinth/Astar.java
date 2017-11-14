@@ -62,10 +62,30 @@ function reconstruct_path(cameFrom, current)
 */
 package labyrinth;
 
+import java.util.*;
+
 /**
  *
  * @author Tuomas Junno
  */
-public class Astar {
+public class Astar {    
+    private Node start,end;
+    private PriorityQueue<Node> open;
+    private ArrayList<Node> closed;
+    private Node[][] map;
     
+    /**
+     * TBA
+     * 
+     * @param map
+     * @param start
+     * @param end
+     */
+    public Astar (Node[][] map, Node start, Node end){
+        this.start = start;
+        this.end = end;
+        this.map  = map;
+        this.open = new PriorityQueue<Node>();
+        this.closed = new ArrayList<Node>();
+    }
 }

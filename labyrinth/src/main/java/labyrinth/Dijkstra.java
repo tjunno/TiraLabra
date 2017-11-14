@@ -24,7 +24,7 @@
 */
 
 package labyrinth;
-
+import java.util.*;
 /**
  *
  * @author Tuomas Junno

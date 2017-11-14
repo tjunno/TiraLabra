@@ -42,5 +42,18 @@ public class NodeTest {
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
     }
+
+    /**
+     * Test of setEnd method, of class Node.
+     */
+    @Test
+    public void testSetEnd() {
+        System.out.println("setEnd");
+        //Node goal = null;
+        //Node instance = null;
+        //instance.setEnd(goal);
+        // TODO review the generated test code and remove the default call to fail.
+        //fail("The test case is a prototype.");
+    }
     
 }
