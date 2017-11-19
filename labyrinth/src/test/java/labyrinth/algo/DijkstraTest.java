@@ -1,4 +1,4 @@
-package labyrinth;
+package labyrinth.algo;
 
 import org.junit.After;
 import org.junit.AfterClass;
@@ -36,6 +36,32 @@ public class DijkstraTest {
     public void testSomeMethod() {
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of search method, of class Dijkstra.
+     */
+    @Test
+    public void testSearch() {
+        System.out.println("search");
+        Dijkstra instance = null;
+        boolean expResult = false;
+        boolean result = instance.search();
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of reconstructPath method, of class Dijkstra.
+     */
+    @Test
+    public void testReconstructPath() {
+        System.out.println("reconstructPath");
+        Dijkstra instance = null;
+        instance.reconstructPath();
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
     }
     
 }

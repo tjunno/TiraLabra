@@ -1,5 +1,6 @@
 package labyrinth;
 import java.util.*;
+import labyrinth.algo.*;
 /**
  *
  * @author Tuomas Junno

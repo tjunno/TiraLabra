@@ -1,4 +1,4 @@
-package labyrinth;
+package labyrinth.algo;
 
 import org.junit.After;
 import org.junit.AfterClass;
@@ -48,6 +48,18 @@ public class AstarTest {
         //instance.search();
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of reconstructPath method, of class Astar.
+     */
+    @Test
+    public void testReconstructPath() {
+        System.out.println("reconstructPath");
+        Astar instance = null;
+        instance.reconstructPath();
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
     }
     
 }

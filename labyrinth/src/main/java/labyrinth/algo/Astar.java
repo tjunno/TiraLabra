@@ -60,43 +60,76 @@ function reconstruct_path(cameFrom, current)
     return total_path
 
 */
-package labyrinth;
+package labyrinth.algo;
 
 import java.util.*;
 
 /**
  *
  * @author Tuomas Junno
+ * 
  */
 public class Astar {    
     private Node start,end;
     private PriorityQueue<Node> open;
     private ArrayList<Node> closed;
     private Node[][] map;
+    private Stack<Node> path;
+    
     
     /**
-     * TBA
+     * Implements AStar algorithm
      * 
      * @param map
      * @param start
      * @param end
+     * @param open
+     * @param closed
      */
     public Astar (Node[][] map, Node start, Node end){
         this.start = start;
         this.end = end;
         this.map  = map;
-        this.open = new PriorityQueue<Node>();
-        this.closed = new ArrayList<Node>();
+        this.open = new PriorityQueue<>();
+        this.closed = new ArrayList<>();
     }
     /**
-     * TBA
+     * Search node
      * 
      */
     
-    public void search(){
+    public boolean search(){
         this.open.add(start);
         this.start.setStart(0);
         this.start.setPath(this.end);
+        
+        while (!this.open.isEmpty()) {
+            Node current = this.open.poll();
+            if (current.equals(start)){
+                reconstructPath();
+                return true;
+            }
+            else{
+                this.open.remove(current);
+                this.closed.add(current);
+            }
+            
+            }
+        return false;
+        }
+    /**
+     * Reconstructs path someday
+     * 
+     */
+    
+    public void reconstructPath(){
+        Node node = this.end;
+        while (!node.equals(this.start)){
+            this.path.push(node);
+            node = node.getParent();
+        }
+        this.path.push(node);
+        
     }
 
 }

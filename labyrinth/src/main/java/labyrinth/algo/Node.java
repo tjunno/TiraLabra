@@ -1,15 +1,18 @@
 
-package labyrinth;
+package labyrinth.algo;
 import java.util.*;
 /**
  * Implements node
  * @author Tuomas Junno
  */
-public class Node {
+public class Node{
     private int x,y;
     private int start;
     private int end;
-    
+    private int path;
+    private ArrayList<Node> neighbors;
+    private Node parent;
+    private boolean visited;
 /**
  * 
  * @param x
@@ -19,13 +22,15 @@ public class Node {
         this.start = Integer.MAX_VALUE;
         this.x = x;
         this.y = y;
+        this.neighbors = new ArrayList<>();
+        this.parent = null;
     }
 /**
  * 
  * @param goal 
  */    
-    public void setEnd(Node goal){
-        this.end = Math.abs((this.getX()-goal.getX())+(this.getY()-goal.getY()));
+    public void setPath(Node goal){
+        this.path = Math.abs((this.getX()-goal.getX())+(this.getY()-goal.getY()));
     }
 
     private int getX() {
@@ -36,15 +41,39 @@ public class Node {
         return this.y;    
     }
     
-    private int getEnd(){
-        return this.end;
+    private int getPath(){
+        return this.path;
     }
 
-    void setStart(int i) {
-        this.start = i;
+    void setStart(int start) {
+        this.start = start;
+    }
+    
+    Node getParent() {
+        return parent;
+    }
+    
+    void setParent(Node parent) {
+        this.parent = parent;
     }
 
-    void setPath(Node end) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    void setVisited() {
+        this.visited = true;
     }
+    
+    boolean isVisited() {
+        return this.visited;
+    }
+    /*
+    void setNeightbors(){
+        
+    }
+    
+    ArrayList<Node> getNeighbors(){
+        
+    }
+    */
+
+
+    
 }
