@@ -49,7 +49,7 @@ public class DijkstraTest {
         boolean result = instance.search();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -61,7 +61,7 @@ public class DijkstraTest {
         Dijkstra instance = null;
         instance.reconstructPath();
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
     
 }

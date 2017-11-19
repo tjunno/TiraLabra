@@ -3,6 +3,7 @@ package labyrinth.algo;
 import java.util.*;
 /**
  * Implements node
+ * 
  * @author Tuomas Junno
  */
 public class Node{
@@ -15,8 +16,8 @@ public class Node{
     private boolean visited;
 /**
  * 
- * @param x
- * @param y 
+ * @param x x
+ * @param y y
  */
     public Node(int x, int y){
         this.start = Integer.MAX_VALUE;

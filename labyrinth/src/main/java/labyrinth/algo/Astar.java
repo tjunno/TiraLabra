@@ -78,7 +78,7 @@ public class Astar {
     
     
     /**
-     * Implements AStar algorithm
+     * AStar algorithm for searching
      * 
      * @param map
      * @param start
@@ -94,7 +94,7 @@ public class Astar {
         this.closed = new ArrayList<>();
     }
     /**
-     * Search node
+     * Will search the shortest path from start to end
      * 
      */
     

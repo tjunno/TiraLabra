@@ -59,7 +59,6 @@ public class AstarTest {
         Astar instance = null;
         instance.reconstructPath();
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
     
 }

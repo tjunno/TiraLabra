@@ -28,7 +28,8 @@
 package labyrinth.algo;
 import java.util.*;
 /**
- *
+ * Dijkstras algorithm for searching
+ * 
  * @author Tuomas Junno
  */
 public class Dijkstra {

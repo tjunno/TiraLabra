@@ -82,8 +82,6 @@ public class NodeTest {
         Node expResult = null;
         Node result = instance.getParent();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -95,8 +93,6 @@ public class NodeTest {
         Node parent = null;
         Node instance = null;
         instance.setParent(parent);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -107,8 +103,6 @@ public class NodeTest {
         System.out.println("setVisited");
         Node instance = null;
         instance.setVisited();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -121,8 +115,6 @@ public class NodeTest {
         boolean expResult = false;
         boolean result = instance.isVisited();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
     
 }
