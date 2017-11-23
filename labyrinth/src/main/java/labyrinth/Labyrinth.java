@@ -28,5 +28,10 @@ public class Labyrinth {
                 laby[i][j] = new Node(i, j);
             }
         }
-    }    
+        Node s = new Node(0, 0);
+        Node e = new Node(10,10);
+        Astar a = new Astar(laby, s, e);
+        a.search();
+        
+    }
 }

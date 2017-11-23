@@ -1,4 +1,4 @@
-/*
+    /*
 function A*(start, goal)
     // The set of nodes already evaluated
     closedSet := {}
@@ -96,24 +96,22 @@ public class Astar {
     /**
      * Will search the shortest path from start to end
      * 
+     * @return boolean
      */
     
     public boolean search(){
-        this.open.add(start);
-        this.start.setStart(0);
-        this.start.setPath(this.end);
+        open.add(start);
+        start.setStart(0);
+        start.setPath(this.end);
         
-        while (!this.open.isEmpty()) {
-            Node current = this.open.poll();
+        while (!open.isEmpty()) {
+            Node current = open.poll();
             if (current.equals(start)){
                 reconstructPath();
                 return true;
             }
-            else{
-                this.open.remove(current);
-                this.closed.add(current);
-            }
-            
+            open.remove(current);
+            closed.add(current);                   
             }
         return false;
         }
@@ -125,10 +123,10 @@ public class Astar {
     public void reconstructPath(){
         Node node = this.end;
         while (!node.equals(this.start)){
-            this.path.push(node);
+            path.push(node);
             node = node.getParent();
         }
-        this.path.push(node);
+        path.push(node);
         
     }
 
