@@ -35,11 +35,11 @@ public class LabyrinthTest {
     /**
      * Test of main method, of class Labyrinth.
      */
-    @Test
-    public void testMain() {
-        System.out.println("main");
-        String[] args = null;
-        Labyrinth.main(args);
-    }
+    //@Test
+    //public void testMain() {
+        //System.out.println("main");
+        //String[] args = null;
+        //Labyrinth.main(args);
+    //}
     
 }

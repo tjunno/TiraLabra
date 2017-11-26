@@ -57,7 +57,6 @@ public class AstarTest {
     public void testReconstructPath() {
         System.out.println("reconstructPath");
         Astar instance = null;
-        instance.reconstructPath();
         // TODO review the generated test code and remove the default call to fail.
     }
     

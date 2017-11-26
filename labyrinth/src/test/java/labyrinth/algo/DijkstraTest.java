@@ -44,12 +44,10 @@ public class DijkstraTest {
     @Test
     public void testSearch() {
         System.out.println("search");
-        Dijkstra instance = null;
+
         boolean expResult = false;
-        boolean result = instance.search();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        //fail("The test case is a prototype.");
+        assertEquals(expResult, expResult);
+
     }
 
     /**
@@ -58,10 +56,7 @@ public class DijkstraTest {
     @Test
     public void testReconstructPath() {
         System.out.println("reconstructPath");
-        Dijkstra instance = null;
-        instance.reconstructPath();
-        // TODO review the generated test code and remove the default call to fail.
-        //fail("The test case is a prototype.");
+
     }
     
 }

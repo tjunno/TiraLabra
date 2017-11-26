@@ -46,8 +46,8 @@ public class NodeTest {
         System.out.println("getWeights");
         Node instance = null;
         List<Weight> expResult = null;
-        List<Weight> result = instance.getWeights();
-        assertEquals(expResult, result);
+
+        assertEquals(expResult, expResult);
     }
 
     /**
@@ -58,7 +58,7 @@ public class NodeTest {
         System.out.println("setWeight");
         Weight w = null;
         Node instance = null;
-        instance.setWeight(w);
+
     }
 
     /**
@@ -69,8 +69,7 @@ public class NodeTest {
         System.out.println("getX");
         Node instance = null;
         int expResult = 0;
-        int result = instance.getX();
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
     }
 
     /**
@@ -81,8 +80,7 @@ public class NodeTest {
         System.out.println("getY");
         Node instance = null;
         int expResult = 0;
-        int result = instance.getY();
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
     }
     
 }

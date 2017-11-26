@@ -43,10 +43,10 @@ public class WeightTest {
     @Test
     public void testGetIGetW() {
         ArrayList<Weight> list = new ArrayList<>();
-        for (int i=1; i<10; i++){
+        for (int i=0; i<10; i++){
             list.add(new Weight(i, i*10));
         }
-        for (int i=1; i<10; i++){
+        for (int i=0; i<10; i++){
             System.out.println("getI");
             assertTrue(list.get(i).getI() == i);
             System.out.println("getW");
