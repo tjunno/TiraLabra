@@ -6,19 +6,26 @@
 package labyrinth.algo;
 
 /**
- *
- * @author tjunno
+ * Weight
+ * @author Tuomas Junno
  */
 public class Weight {
-    private int i,w;    
-    public Weight(int i, int w){
+    private int i;
+    private double w;
+    
+    /**
+     * Weight
+     * @param i
+     * @param w 
+     */
+    public Weight(int i, double w){
         this.i = i;
         this.w = w;
     }    
     public int getI(){
         return i;
     }
-    public int getW(){
+    public double getW(){
         return w;
     }
 }

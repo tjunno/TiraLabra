@@ -69,6 +69,7 @@ import java.util.*;
  * @author Tuomas Junno
  * 
  */
+
 public class Astar {    
     private Node start,end;
     private PriorityQueue<Node> open;
@@ -101,8 +102,8 @@ public class Astar {
     
     public boolean search(){
         open.add(start);
-        start.setStart(0);
-        start.setPath(this.end);
+     //   start.setStart(0);
+     //   start.setPath(this.end);
         
         while (!open.isEmpty()) {
             Node current = open.poll();
@@ -124,7 +125,7 @@ public class Astar {
         Node node = this.end;
         while (!node.equals(this.start)){
             path.push(node);
-            node = node.getParent();
+            //node = node.getParent();
         }
         path.push(node);
         

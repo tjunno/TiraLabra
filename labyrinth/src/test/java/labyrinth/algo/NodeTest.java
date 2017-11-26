@@ -1,5 +1,11 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package labyrinth.algo;
 
+import java.util.List;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -9,7 +15,7 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author Tuomas Junno
+ * @author polaris
  */
 public class NodeTest {
     
@@ -32,88 +38,50 @@ public class NodeTest {
     public void tearDown() {
     }
 
-    @Test
-    public void testSomeMethod() {
-        // TODO review the generated test code and remove the default call to fail.
-        //fail("The test case is a prototype.");
-    }
-
     /**
-     * Test of setEnd method, of class Node.
+     * Test of getWeights method, of class Node.
      */
     @Test
-    public void testSetEnd() {
-        System.out.println("setEnd");
-        Node goal = null;
+    public void testGetWeights() {
+        System.out.println("getWeights");
         Node instance = null;
-        //instance.setEnd(goal);
-    }
-
-    /**
-     * Test of setStart method, of class Node.
-     */
-    @Test
-    public void testSetStart() {
-       //System.out.println("setStart");
-        //int i = 0;
-        //Node instance = null;
-        //instance.setStart(i);
-        // TODO review the generated test code and remove the default call to fail.
-    }
-
-    /**
-     * Test of setPath method, of class Node.
-     */
-    @Test
-    public void testSetPath() {
-        //System.out.println("setPath");
-        //Node end = null;
-        //Node instance = null;
-        //instance.setPath(end);
-    }
-
-    /**
-     * Test of getParent method, of class Node.
-     */
-    @Test
-    public void testGetParent() {
-        System.out.println("getParent");
-        Node instance = null;
-        Node expResult = null;
-        Node result = instance.getParent();
+        List<Weight> expResult = null;
+        List<Weight> result = instance.getWeights();
         assertEquals(expResult, result);
     }
 
     /**
-     * Test of setParent method, of class Node.
+     * Test of setWeight method, of class Node.
      */
     @Test
-    public void testSetParent() {
-        System.out.println("setParent");
-        Node parent = null;
+    public void testSetWeight() {
+        System.out.println("setWeight");
+        Weight w = null;
         Node instance = null;
-        instance.setParent(parent);
+        instance.setWeight(w);
     }
 
     /**
-     * Test of setVisited method, of class Node.
+     * Test of getX method, of class Node.
      */
     @Test
-    public void testSetVisited() {
-        System.out.println("setVisited");
+    public void testGetX() {
+        System.out.println("getX");
         Node instance = null;
-        instance.setVisited();
+        int expResult = 0;
+        int result = instance.getX();
+        assertEquals(expResult, result);
     }
 
     /**
-     * Test of isVisited method, of class Node.
+     * Test of getY method, of class Node.
      */
     @Test
-    public void testIsVisited() {
-        System.out.println("isVisited");
+    public void testGetY() {
+        System.out.println("getY");
         Node instance = null;
-        boolean expResult = false;
-        boolean result = instance.isVisited();
+        int expResult = 0;
+        int result = instance.getY();
         assertEquals(expResult, result);
     }
     

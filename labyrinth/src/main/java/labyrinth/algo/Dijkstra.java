@@ -49,8 +49,8 @@ public class Dijkstra {
     
     public boolean search(){
         this.open.add(start);
-        this.start.setStart(0);
-        this.start.setPath(this.end);
+    //    this.start.setStart(0);
+    //    this.start.setPath(this.end);
         
         while (!this.open.isEmpty()) {
             Node current = this.open.poll();
@@ -59,7 +59,7 @@ public class Dijkstra {
                 return true;
             }
             else{
-                current.setVisited();               
+    //            current.setVisited();               
             }
             
             }
@@ -70,7 +70,7 @@ public class Dijkstra {
             Node node = this.end;
             while (!node.equals(this.start)){
                 this.path.push(node);
-                node = node.getParent();
+    //            node = node.getParent();
             }
             this.path.push(node);
         }
