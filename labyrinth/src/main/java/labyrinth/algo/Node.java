@@ -45,5 +45,13 @@ public class Node{
     public int getY() {
         return this.y;    
     }
+    
+    public String toString() {
+        int[] array = new int[weights.size()];
+        for (int i = 0; i < weights.size(); i++) {
+            array[i] = weights.get(i).getI();
+        }
+        return "x: " + this.x + ", y: " + this.y + " weights:" + Arrays.toString(array);
+    }
 
 }

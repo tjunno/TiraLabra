@@ -74,20 +74,18 @@ public class Astar {
     private Node start,end;
     private PriorityQueue<Node> open;
     private ArrayList<Node> closed;
-    private Node[][] map;
+    private Node[] map;
     private Stack<Node> path;
     
     
     /**
      * AStar algorithm for searching
      * 
-     * @param map
+     * @param graph
      * @param start
      * @param end
-     * @param open
-     * @param closed
      */
-    public Astar (Node[][] map, Node start, Node end){
+    public Astar (Node[] graph, Node start, Node end){
         this.start = start;
         this.end = end;
         this.map  = map;
