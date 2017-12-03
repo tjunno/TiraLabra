@@ -81,11 +81,11 @@ public class Astar {
     /**
      * AStar algorithm for searching
      * 
-     * @param graph
+     * @param map
      * @param start
      * @param end
      */
-    public Astar (Node[] graph, Node start, Node end){
+    public Astar (Node[] map, Node start, Node end){
         this.start = start;
         this.end = end;
         this.map  = map;
@@ -120,13 +120,24 @@ public class Astar {
      */
     
     public void reconstructPath(){
-        Node node = this.end;
-        while (!node.equals(this.start)){
+        Node node = end;
+        while (!node.equals(start)){
             path.push(node);
             //node = node.getParent();
         }
         path.push(node);
         
-    }
+    }/*
+    public void bar(){
+        boolean visited = false;
+        while(!visited){
+            if(smallest == target){
+                visited = true;
+            }
+        }
+      
+
+
+    }*/
 
 }

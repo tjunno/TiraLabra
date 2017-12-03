@@ -7,7 +7,7 @@ package labyrinth.algo;
 
 /**
  *
- * @author tjunno
+ * @author Tuomas Junno
  */
 public class GraphBuilder {
 
@@ -95,76 +95,6 @@ public class GraphBuilder {
             node.setWeight(new Weight(p+x-1, 1.4));
             node.setWeight(new Weight(p+x+1, 1.4));
         }
-        
-        
-        /*else
-        if (node.getX()==x && node.getY()==y){
-            node.setWeight(new Weight(6-p, 1));
-            node.setWeight(new Weight(8-p, 1));
-            node.setWeight(new Weight(5-p, 1.4));
-        }else
-        if (node.getX()==x && node.getY()==0){
-            node.setWeight(new Weight(p-2, 1));
-            node.setWeight(new Weight(p-6, 1));
-            node.setWeight(new Weight(p-5, 1.4));
-        }else
-        if (node.getX()==0 && node.getY()==y){
-            node.setWeight(new Weight(p-4, 1));
-            node.setWeight(new Weight(p-8, 1));
-            node.setWeight(new Weight(p-5, 1.4));
-        }else  
-        if (node.getX()!=0&& node.getY()==0){
-            node.setWeight(new Weight(p-1, 1));
-            node.setWeight(new Weight(p-2, 1.4));
-            node.setWeight(new Weight(p-5, 1));
-            node.setWeight(new Weight(p-7, 1));
-            node.setWeight(new Weight(p-8, 1.4));
-        }else
-        if (node.getX()==0 && node.getY()!=0){
-            node.setWeight(new Weight(p-1, 1));
-            node.setWeight(new Weight(p-4, 1.4));
-            node.setWeight(new Weight(p-3, 1));
-            node.setWeight(new Weight(p-5, 1));
-            node.setWeight(new Weight(p-6, 1.4));
-        }else
-        if (node.getX()!=x && node.getY()==y){
-            node.setWeight(new Weight(p-3, 1));
-            node.setWeight(new Weight(p-2, 1.4));
-            node.setWeight(new Weight(p-5, 1));
-            node.setWeight(new Weight(p-8, 1));
-            node.setWeight(new Weight(p-9, 1.4));
-        }else
-        if (node.getX()==x && node.getY()!=y){
-            node.setWeight(new Weight(7-x, 1));
-            node.setWeight(new Weight(4-x, 1.4));
-            node.setWeight(new Weight(5-x, 1));
-            node.setWeight(new Weight(6-x, 1));
-            node.setWeight(new Weight(9-x, 1.4));
-        }
-        else{
-            node.setWeight(new Weight(1-x, 1.4));
-            node.setWeight(new Weight(2-x, 1));
-            node.setWeight(new Weight(3-x, 1.4));
-            node.setWeight(new Weight(4-x, 1));
-            node.setWeight(new Weight(5-x, 1.4));
-            node.setWeight(new Weight(6-x, 1));
-            node.setWeight(new Weight(7-x, 1.4));
-            node.setWeight(new Weight(8-x, 1));
-            node.setWeight(new Weight(9-x, 1.4));
-        }/*
-            else{
-             for (int i=1; i<9; i++){
-                 if (i!=index){
-                 if ((i % index) == 0){
-                     node.setWeight(new Weight(i, 1));
-                 }
-                 else{
-                     node.setWeight(new Weight(i, 1.4));                
-                 }
-                 }
-             }
-             
-            }*/
-        }
+    }
    
 }

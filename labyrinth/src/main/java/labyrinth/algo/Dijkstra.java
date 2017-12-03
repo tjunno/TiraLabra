@@ -35,11 +35,11 @@ import java.util.*;
 public class Dijkstra {
     private Node start;
     private Node end;
-    private Node[][] map;
+    private Node[] map;
     private PriorityQueue<Node> open;
     private Stack<Node> path;
         
-    public Dijkstra(Node[][] map, Node start, Node end){
+    public Dijkstra(Node[] map, Node start, Node end){
         this.start = start;
         this.end = end;
         this.map = map;

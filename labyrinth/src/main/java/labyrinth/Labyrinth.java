@@ -22,16 +22,13 @@ public class Labyrinth {
      * @param args 
      */
     public static void main(String[] args) {
-
-
         Node[] foo = GraphBuilder.GraphBuilder(10, 10);
         nicePrint(foo);
-        
     }
     
-    public static void nicePrint(Node[] graph) {
-        for (int i = 0; i < graph.length; i++) {
-            System.out.println(i + " , " + graph[i]);
+    public static void nicePrint(Node[] map) {
+        for (int i = 0; i < map.length; i++) {
+            System.out.println(i + " , " + map[i]);
         };
     }
 }

@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package labyrinth.algo;
 
+package labyrinth.algo;
+import java.util.*;
 /**
  * Weight
  * @author Tuomas Junno
@@ -28,4 +29,5 @@ public class Weight {
     public double getW(){
         return w;
     }
+
 }

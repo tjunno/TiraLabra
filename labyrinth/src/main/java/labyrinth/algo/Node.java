@@ -8,13 +8,12 @@ import java.util.*;
  */
 public class Node{
     private int x,y;
-   //private Weight[] weights;
+    //private Weight[] weights;
     private List<Weight> weights;
     /**
     * 
     * @param x x-coordinate
     * @param y y-coordinate
-    * @param weights weights
  */
     public Node(int x, int y){
         this.x = x;
@@ -30,7 +29,7 @@ public class Node{
         this.path = Math.abs((this.getX()-goal.getX())+(this.getY()-goal.getY()));
     }
 */
-        //this.neighbors = new ArrayList<>();
+        //neighbors = new ArrayList<>();
     
     public List<Weight> getWeights(){
         return weights;
@@ -46,6 +45,7 @@ public class Node{
         return this.y;    
     }
     
+    @Override
     public String toString() {
         int[] array = new int[weights.size()];
         for (int i = 0; i < weights.size(); i++) {
