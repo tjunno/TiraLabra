@@ -98,8 +98,8 @@ public class Astar {
      * @return boolean
      */
     
-    public boolean search(){
-        open.add(start);
+    public double search(Node[] map, int start, int end){
+        double d = -1;
      //   start.setStart(0);
      //   start.setPath(this.end);
         
@@ -107,12 +107,12 @@ public class Astar {
             Node current = open.poll();
             if (current.equals(start)){
                 reconstructPath();
-                return true;
+                return d;
             }
             open.remove(current);
             closed.add(current);                   
             }
-        return false;
+        return d;
         }
     /**
      * Reconstructs path someday
