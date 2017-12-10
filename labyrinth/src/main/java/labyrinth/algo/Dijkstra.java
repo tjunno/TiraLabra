@@ -32,53 +32,69 @@ import java.util.*;
  * 
  * @author Tuomas Junno
  */
-public class Dijkstra {
-    private Node start;
-    private Node end;
-    private Node[] map;
-    private PriorityQueue<Node> open;
-    private Stack<Node> path;
-        
-    public Dijkstra(Node[] map, Node start, Node end){
-        this.start = start;
-        this.end = end;
-        this.map = map;
-        this.open = new PriorityQueue<>();
-        this.path = new Stack<>();
+public class Dijkstra {      
+/**
+ * Dijkstra algorithm
+ * @param map Graph to be searched
+ * @param start Start of the search
+ * @param end End of the search
+ * @return path cost for now
+ */
+    public double search(Node[] map, int start, int end){       
+        PriorityQueue<Weight> prio = new PriorityQueue(new Comp());
+        double[] dist = new double[map.length+1];
+        int[] path = new int[map.length+1];
+        boolean[] visited = new boolean[map.length+1];
+        for (int i = 0; i <= map.length; i++) {
+            dist[i] = Integer.MAX_VALUE;
+            path[i] = -1;          
+        }                    
+        dist[start] = 0;
+        prio.add(new Weight(start, 0));
+        while(!prio.isEmpty()){
+            Weight weight = prio.poll();
+            int i = weight.getI();
+            double distance = weight.getW();
+            if(visited[i]){
+                continue;
+            }
+            visited[i] = true;
+            map[i].getWeights().stream()
+            .filter((next) -> (dist[next.getI()] > distance + next.getW()))
+            .map((next) -> {
+                dist[next.getI()] = (distance + next.getW());
+                return next;
+            }).map((next) -> {
+                path[next.getI()] = i;
+                return next;
+            }).forEach((next) -> {
+                prio.add(new Weight(next.getI(),dist[next.getI()]));
+            });     
+        }
+        if (dist[end] == Integer.MAX_VALUE){
+            return -1;
+        }
+        reconstructPath(path,start,end);
+        return dist[end];
     }
-    
-    public boolean search(){
-        this.open.add(start);
-    //    this.start.setStart(0);
-    //    this.start.setPath(this.end);
-        
-        while (!this.open.isEmpty()) {
-            Node current = this.open.poll();
-            if (current.equals(end)){
-                reconstructPath();
-                return true;
+    /**
+     * Construct the path
+     * @param path Path
+     * @param start Start
+     * @param end End
+     */
+    private void reconstructPath(int[] path, int start, int end){
+        int next = end;
+        while(true){
+            System.out.println("Path at tile \n" + next);
+            if(path[next] == -1){
+                return;
             }
-            else{
-    //            current.setVisited();               
+            next = path[next];
+            if(next == start){
+                return;
             }
-            
-            }
-        return false;
         }
-    
-        public void reconstructPath(){
-            Node node = this.end;
-            while (!node.equals(this.start)){
-                this.path.push(node);
-    //            node = node.getParent();
-            }
-            this.path.push(node);
-        }
-    
-    /*
-    Relax(u,v,w)
-1 if distance[v] > distance[u] + w(u,v)
-2 distance[v] = distance[u]+w(u,v)
-3 path[v] = u
-    */
+    }
 }
+

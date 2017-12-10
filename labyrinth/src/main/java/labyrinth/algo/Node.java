@@ -2,14 +2,14 @@
 package labyrinth.algo;
 import java.util.*;
 /**
- * Implements node
+ * Class representing a node that has X- and Y-coordinate and list of weights
  * 
  * @author Tuomas Junno
  */
 public class Node{
-    private int x,y;
+    private final int x,y;
     //private Weight[] weights;
-    private List<Weight> weights;
+    private final List<Weight> weights;
     /**
     * 
     * @param x x-coordinate
@@ -25,7 +25,7 @@ public class Node{
  
  @param goal 
    
-    public void setPath(Node goal){
+    public void setPath(Node end){
         this.path = Math.abs((this.getX()-goal.getX())+(this.getY()-goal.getY()));
     }
 */

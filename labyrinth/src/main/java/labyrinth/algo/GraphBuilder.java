@@ -14,9 +14,9 @@ public class GraphBuilder {
     
     /**
      * THE GraphBuilder
-     * @param x
-     * @param y
-     * @return 
+     * @param x X-coordinate
+     * @param y Y-coordinate
+     * @return graph
      */
     public static Node[] GraphBuilder(int x, int y){
 
@@ -33,14 +33,14 @@ public class GraphBuilder {
     }
     /**
      * Very classy way to add weights
-     * 1   2  3  4  5
-     * 6   7  8  9 10
-     * 11 12 13 14 15
-     * 16 17 18 19 20
-     * 21 22 23 24 25
-     * @param node
-     * @param x
-     * @param y 
+     * 0   1  2  3  4
+     * 5   6  7  8  9
+     * 10 11 12 13 14
+     * 15 16 17 18 19
+     * 20 21 22 23 24
+     * @param node The node which gonna be stuffed with weights
+     * @param x X-coordinate
+     * @param y Y-coordinate
      */
     public static void addWeights(Node node, int x, int y){
         int p = node.getX()+(node.getY()*x);
