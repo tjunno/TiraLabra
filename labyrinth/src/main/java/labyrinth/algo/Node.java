@@ -26,7 +26,7 @@ public class Node{
  @param goal 
    
     public void setPath(Node end){
-        this.path = Math.abs((this.getX()-goal.getX())+(this.getY()-goal.getY()));
+        this.path = Math.abs((this.getX()-end.getX())+(this.getY()-end.getY()));
     }
 */
         //neighbors = new ArrayList<>();
@@ -52,6 +52,14 @@ public class Node{
             array[i] = weights.get(i).getI();
         }
         return "x: " + this.x + ", y: " + this.y + " weights:" + Arrays.toString(array);
+    }
+
+    double getStart() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    double getEnd() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }

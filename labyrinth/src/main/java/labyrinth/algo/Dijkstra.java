@@ -41,7 +41,7 @@ public class Dijkstra {
  * @return path cost for now
  */
     public double search(Node[] map, int start, int end){       
-        PriorityQueue<Weight> prio = new PriorityQueue(new Comp());
+        PriorityQueue<Weight> prio = new PriorityQueue(new DComp());
         double[] dist = new double[map.length+1];
         int[] path = new int[map.length+1];
         boolean[] visited = new boolean[map.length+1];

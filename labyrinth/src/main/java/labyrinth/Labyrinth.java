@@ -1,5 +1,4 @@
 package labyrinth;
-import java.util.*;
 import labyrinth.algo.*;
 /**
  *

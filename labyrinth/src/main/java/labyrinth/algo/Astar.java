@@ -99,7 +99,10 @@ public class Astar {
      */
     
     public double search(Node[] map, int start, int end){
-        double d = -1;
+        if (start == end){
+            double d = -1;
+            return 0;
+        }
      //   start.setStart(0);
      //   start.setPath(this.end);
         
