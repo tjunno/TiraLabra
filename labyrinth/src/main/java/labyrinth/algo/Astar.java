@@ -100,11 +100,11 @@ public class Astar {
     
     public double search(Node[] map, int start, int end){
         if (start == end){
-            double d = -1;
             return 0;
         }
      //   start.setStart(0);
      //   start.setPath(this.end);
+        double d = -1;
         
         while (!open.isEmpty()) {
             Node current = open.poll();
