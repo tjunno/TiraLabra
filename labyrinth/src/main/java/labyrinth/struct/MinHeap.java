@@ -6,7 +6,7 @@ import java.util.Comparator;
  * Will be implementing MinHeap
  * 
  * @author Tuomas Junno
- * @param <T> type
+ * @param <T> 
  */
 public class MinHeap<T> {
     private T[] heap;
@@ -78,7 +78,7 @@ public class MinHeap<T> {
         int j = 0;
         do{
             i=j;
-            if (left(i) < size){            
+            if (right(i) < size){            
                 if (c.compare(heap[j], heap[i])<0){
                     j=left(i);
                 }
