@@ -1,4 +1,4 @@
-## Viikkoraportti 4
+## Viikkoraportti 6
 
 ### Mitä on tullut tehtyä
 Tälläkin on viikolla ovat olleet työn alla algoritmit ja rakenteet. Tällä viikolla on ahkerasti yritetty toteuttaa luokkia parhaalla mahdollisella vauhdilla. Dijkstra lienee kohtalaisen valmis. Minheap on ideoitu mutta vielä julkaistu. Samassa on jatkettu myös intensiivistä opiskelua asian tiimoilta. Luokat ovat vielä vaiheessa, mutta mahdollisuus ohjelman täydelliseen toteutukseen on olemassa ja toivottavasti aikataulut pitävät vieläkin paremmin jatkossa.

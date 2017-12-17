@@ -1,4 +1,4 @@
-## Viikkoraportti 4
+## Viikkoraportti 5
 
 ### Mitä on tullut tehtyä
 Tälläkin on viikolla ovat olleet työn alla tehtävään liittävät rakenteet. Tällä viikolla on ahkerasti yritetty toteuttaa luokkia parhaalla mahdollisella vauhdilla. Samassa on jatkettu myös intensiivistä opiskelua asian tiimoilta. Monta luokkaa on hieman vaiheessa, mutta mahdollisuus ohjelman täydelliseen toteutukseen on olemassa ja toivottavasti aikataulut pitävät vieläkin paremmin jatkossa.
