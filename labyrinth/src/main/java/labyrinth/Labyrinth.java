@@ -1,7 +1,7 @@
 package labyrinth;
 import labyrinth.algo.*;
 /**
- * http://www.movingai.com/benchmarks/
+ * 
  * @author Tuomas Junno
  */
 public class Labyrinth {
