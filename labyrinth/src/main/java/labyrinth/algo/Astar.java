@@ -70,75 +70,73 @@ import java.util.*;
  * 
  */
 
-public class Astar {    
-    private Node start,end;
-    private PriorityQueue<Node> open;
-    private ArrayList<Node> closed;
-    private Node[] map;
-    private Stack<Node> path;
-    
-    
+public class Astar {   
     /**
      * AStar algorithm for searching
      * 
      * @param map
      * @param start
      * @param end
-     */
-    public Astar (Node[] map, Node start, Node end){
-        this.start = start;
-        this.end = end;
-        this.map  = map;
-        this.open = new PriorityQueue<>();
-        this.closed = new ArrayList<>();
-    }
-    /**
-     * Will search the shortest path from start to end
-     * 
-     * @return boolean
-     */
-    
-    public double search(Node[] map, int start, int end){
+     * @return 
+     */     
+    public double search(Node[] map, int start, int end){  
         if (start == end){
             return 0;
         }
-     //   start.setStart(0);
-     //   start.setPath(this.end);
-        double d = -1;
         
-        while (!open.isEmpty()) {
-            Node current = open.poll();
-            if (current.equals(start)){
-                reconstructPath();
-                return d;
+        double[] tostart = new double[map.length+1];
+        int[] path = new int[map.length+1];
+        boolean[] visited = new boolean[map.length+1];
+        for (int i = 0; i <= map.length; i++) {
+            tostart[i] = Integer.MAX_VALUE;
+            path[i] = -1;          
+        }                    
+        tostart[start] = 0;
+        PriorityQueue<Anode> prio = new PriorityQueue(map.length, new AComp(map[end].getX(), map[end].getY()));
+        prio.add(new Anode(start, (int) tostart[start], map[start].getX(), map[start].getY()));
+        while(!prio.isEmpty()){
+            Anode anode = prio.poll();
+            int i = anode.getId();
+            if (visited[end]){
+                break;
             }
-            open.remove(current);
-            closed.add(current);                   
+            if(visited[i]){
+                continue;
             }
-        return d;
+            visited[i] = true;
+            for (int j = 0; j < map[i].getWeights().size(); i++) {
+                Weight next = map[i].getWeights().get(i);
+                if(tostart[next.getI()] > tostart[i] + next.getW()){
+                    tostart[next.getI()] = tostart[i] + next.getW();
+                    prio.add(new Anode(next.getI(), (int) tostart[next.getI()], map[next.getI()].getX(), map[next.getI()].getY()));
+                    path[next.getI()] = i;
+                }
+            }
         }
+        if (tostart[end] == Integer.MAX_VALUE){
+            return -1;
+        }
+        reconstructPath(path,start,end);
+        return tostart[end];       
+    }
     /**
-     * Reconstructs path someday
-     * 
+     * Show us the path
+     * @param path Path
+     * @param start Start
+     * @param end End
      */
-    
-    public void reconstructPath(){
-        Node node = end;
-        while (!node.equals(start)){
-            path.push(node);
-            //node = node.getParent();
-        }
-        path.push(node);
-        
-    }/*
-    public void bar(){
-        boolean visited = false;
-        while(!visited){
-            if(smallest == target){
-                visited = true;
+    private void reconstructPath(int[] path, int start, int end){
+        int next = end;
+        while(true){
+            System.out.println("Path at tile \n" + next);
+            if(path[next] == -1){
+                return;
+            }
+            next = path[next];
+            if(next == start){
+                return;
             }
         }
-      
-    }*/
+    }
 
 }
