@@ -6,7 +6,7 @@ Toteutuksessa on ollut algoritmit ja niiden testaaminen. Myös minimikeolle on a
 
 ### Ajankäyttö
 
-Aikaa on kulunut algoritmeihin ja tietorakenteihin.  Aikaa voi arvioida kuluneen noin 15 tuntia.
+Aikaa on kulunut algoritmeihin ja tietorakenteihin. Aikaa voi arvioida kuluneen noin 15 tuntia.
 
 ### Vaikeudet
 
@@ -14,4 +14,4 @@ Kaikki algoritmit eivät vielä toimi. Myös tietorakenteissa on parantamisen va
 
 ### Tulevaisuus
 
-Pitäisi saada tämän hetkiset algoritmit kuntoon. Olisi syytä saada saada omat tietorakenteet toimimaan ja siten siirtyä niiden käyttöön mitä pikemmiten.
+Pitäisi saada tämän hetkiset algoritmit kuntoon. Olisi myös syytä saada omat tietorakenteet toimimaan ja siten siirtyä niiden käyttöön mitä pikemmiten.
