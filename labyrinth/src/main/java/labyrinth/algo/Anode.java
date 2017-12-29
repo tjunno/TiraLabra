@@ -1,8 +1,7 @@
-
 package labyrinth.algo;
 
 /**
- *
+ * Astar node
  * @author Tuomas Junno
  */
 public class Anode {

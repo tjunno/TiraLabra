@@ -47,7 +47,7 @@ public class GraphBuilderTest {
         int y = 0;
         GraphBuilder instance = new GraphBuilder();
         Node[] expResult = null;
-        Node[] result = instance.GraphBuilder(x, y);
+        Node[] result = GraphBuilder.GraphBuilder(x, y);
         assertArrayEquals(expResult, expResult);
 
     }
@@ -62,7 +62,7 @@ public class GraphBuilderTest {
         int x = 0;
         int y = 0;
         GraphBuilder instance = new GraphBuilder();
-        instance.addWeights(node, x, y);
+        GraphBuilder.addWeights(node, x, y);
 
     }
     

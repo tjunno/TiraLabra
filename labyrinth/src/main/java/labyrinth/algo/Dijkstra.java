@@ -27,6 +27,7 @@
 
 package labyrinth.algo;
 import java.util.*;
+import labyrinth.struct.MinHeap;
 /**
  * Dijkstras algorithm for searching
  * 
@@ -40,7 +41,8 @@ public class Dijkstra {
  * @param end End of the search
  * @return path cost for now
  */
-    public double search(Node[] map, int start, int end){       
+    public double search(Node[] map, int start, int end){
+        //MinHeap<Weight> prio = new MinHeap(new DComp());
         PriorityQueue<Weight> prio = new PriorityQueue(new DComp());
         double[] dist = new double[map.length+1];
         int[] path = new int[map.length+1];

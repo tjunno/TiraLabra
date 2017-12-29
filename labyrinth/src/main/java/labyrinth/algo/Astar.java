@@ -72,7 +72,7 @@ import java.util.*;
 
 public class Astar {   
     /**
-     * AStar algorithm for searching
+     * AStar algorithm for searching (under construction)
      * 
      * @param map
      * @param start
@@ -84,9 +84,9 @@ public class Astar {
             return 0;
         }
         
-        double[] tostart = new double[map.length+1];
-        int[] path = new int[map.length+1];
-        boolean[] visited = new boolean[map.length+1];
+        double[] tostart = new double[map.length];
+        int[] path = new int[map.length];
+        boolean[] visited = new boolean[map.length];
         for (int i = 0; i <= map.length; i++) {
             tostart[i] = Integer.MAX_VALUE;
             path[i] = -1;          

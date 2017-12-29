@@ -40,17 +40,35 @@ public class DCompTest {
     /**
      * Test of compare method, of class DComp.
      */
+  
     @Test
+    public void test(){
+        
+    }
+    /*
     public void testCompare() {
         System.out.println("compare");
-        Weight o1 = null;
-        Weight o2 = null;
+        Weight o1 = new Weight(1, 1);
+        Weight o2 = new Weight(2, 2);
         DComp instance = new DComp();
         int expResult = 0;
         int result = instance.compare(o1, o2);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
-    
+    */
+
+    /**
+     * Test of compare method, of class DComp.
+     */
+    @Test
+    public void testCompare() {
+        System.out.println("compare");
+        Weight o1 = new Weight(1, 1);
+        Weight o2 = new Weight(1, 1);;
+        DComp instance = new DComp();
+        int expResult = 0;
+        int result = instance.compare(o1, o2);
+        assertEquals(expResult, result);
+    }
 }

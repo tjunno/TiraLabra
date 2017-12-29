@@ -14,7 +14,7 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author tjunno
+ * @author polaris
  */
 public class ACompTest {
     
@@ -43,14 +43,12 @@ public class ACompTest {
     @Test
     public void testCompare() {
         System.out.println("compare");
-        Anode o1 = null;
-        Anode o2 = null;
-        AComp instance = null;
+        Anode o1 = new Anode(1, 1, 1, 1);
+        Anode o2 = new Anode(1, 1, 1, 1);
+        AComp instance = new AComp(1, 1);
         int expResult = 0;
         int result = instance.compare(o1, o2);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
     
 }

@@ -14,7 +14,12 @@ public class MinHeap<T> {
     private int size;
     
     public MinHeap(int initsize, Comparator c){
-        this.heap = (T[])new Object[initsize];
+        this.heap = (T[])new Comparable[initsize];
+        this.c = c;
+    }
+
+    public MinHeap(Comparator c) {
+        this.heap = (T[])new Comparable[1];
         this.c = c;
     }
     
@@ -45,7 +50,7 @@ public class MinHeap<T> {
     }
     
     public boolean isEmpty() {
-        return false;   
+        return size==0;   
     }
     
     private int right(int p) {
@@ -56,19 +61,17 @@ public class MinHeap<T> {
         return (p << 1) + 1;
     }    
 
-    private void upHeapify(int index) {
-        if (index == 0){
+    private void upHeapify(int i) {
+        if (i == 0){
             return;
         }
-        int j;
-        int i=index;
         while (i>0){
-            j = parent(i);
-            if (c.compare(heap[j], heap[i]) >= 0){
+            if (c.compare(heap[parent(i)], heap[i]) >= 0){
+//            if (heap[j].compareTo(heap[i])>=0){
                 return;
             } else { 
-            swap(i, j);
-            i=j;
+            swap(i, parent(i));
+            i=parent(i);
             }
         }    
     }
@@ -79,10 +82,12 @@ public class MinHeap<T> {
         do{
             i=j;
             if (right(i) < size){            
-                if (c.compare(heap[j], heap[i])<0){
+                if (c.compare(heap[j], heap[i]) < 0){
+                //if (heap[j].compareTo(heap[i]) < 0){
                     j=left(i);
                 }
-                if (right(i) < size && c.compare(heap[j], heap[i])<0){
+                if (right(i) < size && c.compare(heap[j], heap[i]) < 0){
+                //if (right(i) < size && heap[j].compareTo(heap[i]) < 0){
                     j=right(i);
                 }
             }
