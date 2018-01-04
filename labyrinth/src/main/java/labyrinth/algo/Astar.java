@@ -119,6 +119,7 @@ public class Astar {
         reconstructPath(path,start,end);
         return tostart[end];       
     }
+    
     /**
      * Show us the path
      * @param path Path

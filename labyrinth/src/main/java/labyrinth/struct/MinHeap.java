@@ -19,64 +19,70 @@ public class MinHeap<T> {
     }
 
     public MinHeap(Comparator c) {
-        this.heap = (T[])new Comparable[1];
-        this.c = c;
+        this(1, c);
     }
     
     public void add(T e){
-        heap[size] = e;
+        if (size >= heap.length - 1){
+            upsize();
+        }
         size++;
-        upHeapify(size - 1);
+        heap[size] = e;
+        upHeapify();
     }
     
     public void swap(int i, int j){
         T t = heap[i];
         heap[i] = heap[j];
-        heap[j] = t;      
+        heap[j] = t;
     }
     
     public T poll(){
-        if (size == 0){
+        if (isEmpty()){
             return null;            
         }
+        T h = heap[1];
+        heap[1] = heap[size];
+        heap[size] = null;
         size--;
-        swap(0, size);
-        downHeapify(size);
-        return heap[size];
+        downHeapify();
+        return h;
     }
     
     private int parent(int c) {
-        return (c - 1) >> 1;        
+        return c/2;
     }
     
     public boolean isEmpty() {
         return size==0;   
     }
     
-    private int right(int p) {
-        return (p + 1)>>1;
+    public int size(){
+        return size;
+    }
+    
+    private int right(int p) {        
+        return (2 * p);
     }
 
-    private int left(int p) {
-        return (p << 1) + 1;
+    private int left(int p) {        
+        return (2 * p) + 1;
     }    
 
-    private void upHeapify(int i) {
-        if (i == 0){
-            return;
-        }
-        while (i>0){
-            if (c.compare(heap[parent(i)], heap[i]) >= 0){
-//            if (heap[j].compareTo(heap[i])>=0){
-                return;
-            } else { 
+    private void upHeapify() {
+        int i = this.size;
+        while (i>0 && c.compare(heap[parent(i)], heap[i]) > 0){
+//            if (c.compare(heap[parent(i)], heap[i]) > 0){
+//            if (heap[j].compareTo(heap[i])>0){
+            //    return;
+            //} else { 
             swap(i, parent(i));
             i=parent(i);
-            }
+            //}
         }    
     }
-
-    private void downHeapify(int size) {
+/*
+    private void downHeapify2(int size) {
         int i;
         int j = 0;
         do{
@@ -93,5 +99,28 @@ public class MinHeap<T> {
             }
             swap(i,j);
         }while(i!=j);
+    }*/
+    private void downHeapify(){
+        int i=1;
+        while(left(i) <= size){
+            int j = left(i);
+            if (right(i) <= size && c.compare(heap[left(i)], right(i)) > 0){
+                j = right(i);
+            }
+            if (c.compare(heap[i], heap[j]) > 0){
+                swap(i,j);
+            }
+            i=j;
+        }
     }
+    
+    private void upsize() {
+        T[] n = (T[]) new Object[this.heap.length * 2];
+        //System.arraycopy(this.heap, 0, n, 0, n.length);
+        for(int i=0; i<n.length; i++){
+            n[i] = this.heap[i];
+        }
+        this.heap = n;
+    }
+
 }

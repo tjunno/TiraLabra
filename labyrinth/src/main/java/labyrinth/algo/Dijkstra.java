@@ -71,7 +71,7 @@ public class Dijkstra {
                 return next;
             }).forEach((next) -> {
                 prio.add(new Weight(next.getI(),dist[next.getI()]));
-            });     
+            });  
         }
         if (dist[end] == Integer.MAX_VALUE){
             return -1;

@@ -5,7 +5,7 @@ import java.util.Comparator;
  * @author Tuomas Junno
  */
 public class AComp implements Comparator<Anode> {
-    int x,y;
+    private int x,y;
     
     public AComp(int x, int y){
         this.x = x;
@@ -20,8 +20,9 @@ public class AComp implements Comparator<Anode> {
             o1.setEnd(Math.abs((o2.getX()-x)+(o2.getY()-y)));
         }
         double comp = ((o1.getStart() + o1.getEnd())) - (o2.getStart() + o2.getEnd());
+
         if (comp < -1) return -1;
-        if (comp == 0) return 0;
+        if (comp > 1) return 1;
         return 0;
     }
 }
