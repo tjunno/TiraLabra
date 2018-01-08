@@ -16,6 +16,7 @@ public class MinHeap<T> {
     public MinHeap(int initsize, Comparator c){
         this.heap = (T[])new Comparable[initsize];
         this.c = c;
+        size = 0;
     }
 
     public MinHeap(Comparator c) {
@@ -23,11 +24,13 @@ public class MinHeap<T> {
     }
     
     public void add(T e){
-        if (size >= heap.length - 1){
+        System.out.println("size on: " + size + " heappi on: " + heap.length);
+        if (size > heap.length - 1){
             upsize();
         }
+        System.out.println("size on: " + size + " heappi on: " + heap.length);
         size++;
-        heap[size] = e;
+        heap[size] = e;       
         upHeapify();
     }
     
@@ -38,7 +41,7 @@ public class MinHeap<T> {
     }
     
     public T poll(){
-        if (isEmpty()){
+        if (this.isEmpty()){
             return null;            
         }
         T h = heap[1];
@@ -50,27 +53,27 @@ public class MinHeap<T> {
     }
     
     private int parent(int c) {
-        return c/2;
+        return c / 2;
     }
     
     public boolean isEmpty() {
-        return size==0;   
+        return this.size==0;   
     }
     
     public int size(){
-        return size;
-    }
-    
-    private int right(int p) {        
-        return (2 * p);
+        return this.size;
     }
 
     private int left(int p) {        
+        return (2 * p);
+    }
+    
+    private int right(int p) {        
         return (2 * p) + 1;
-    }    
+    }
 
     private void upHeapify() {
-        int i = this.size;
+        int i = size;
         while (i>0 && c.compare(heap[parent(i)], heap[i]) > 0){
 //            if (c.compare(heap[parent(i)], heap[i]) > 0){
 //            if (heap[j].compareTo(heap[i])>0){
@@ -79,8 +82,9 @@ public class MinHeap<T> {
             swap(i, parent(i));
             i=parent(i);
             //}
-        }    
+        }
     }
+
 /*
     private void downHeapify2(int size) {
         int i;
@@ -113,7 +117,6 @@ public class MinHeap<T> {
             i=j;
         }
     }
-    
     private void upsize() {
         T[] n = (T[]) new Object[this.heap.length * 2];
         //System.arraycopy(this.heap, 0, n, 0, n.length);

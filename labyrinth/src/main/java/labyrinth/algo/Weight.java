@@ -5,14 +5,14 @@
  */
 
 package labyrinth.algo;
-import java.util.*;
+
 /**
  * Weight
  * @author Tuomas Junno
  */
 public class Weight {
-    private int i;
-    private double w;
+    private final int i;
+    private final double w;
     
     /**
      * Weight

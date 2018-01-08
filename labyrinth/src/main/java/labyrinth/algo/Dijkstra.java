@@ -27,7 +27,7 @@
 
 package labyrinth.algo;
 import java.util.*;
-import labyrinth.struct.MinHeap;
+import labyrinth.struct.*;
 /**
  * Dijkstras algorithm for searching
  * 
@@ -53,6 +53,26 @@ public class Dijkstra {
         }                    
         dist[start] = 0;
         prio.add(new Weight(start, 0));
+        
+        while(!prio.isEmpty()){
+            Weight weight = prio.poll();
+            int i = weight.getI();
+            double distance = weight.getW();
+            if(visited[i]){
+                continue;
+            }
+            visited[i] = true;            
+            for(Weight next:map[i].getWeights()){
+                if(dist[next.getI()] > distance + next.getW()){
+                    if(dist[next.getI()] > distance + next.getW()){
+                        dist[next.getI()] = distance + next.getW();
+                        path[next.getI()] = i;
+                        prio.add(new Weight(next.getI(),dist[next.getI()]));
+                    }                                    
+                }                
+            }
+            
+        } /* stream 
         while(!prio.isEmpty()){
             Weight weight = prio.poll();
             int i = weight.getI();
@@ -72,7 +92,7 @@ public class Dijkstra {
             }).forEach((next) -> {
                 prio.add(new Weight(next.getI(),dist[next.getI()]));
             });  
-        }
+        }*/
         if (dist[end] == Integer.MAX_VALUE){
             return -1;
         }
