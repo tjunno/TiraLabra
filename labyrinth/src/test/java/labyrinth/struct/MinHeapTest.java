@@ -49,8 +49,8 @@ public class MinHeapTest {
     @Test
     public void testAdd() {
         System.out.println("add");
-        Node e = new Node(1,1);
-        //heap.add(e);
+        //heap.add(new Node(1,1));
+        //heap.add(new Node(2,2));
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
     }
@@ -87,5 +87,4 @@ public class MinHeapTest {
         boolean result = heap.isEmpty();
         assertEquals(expResult, result);
     }
-    
 }

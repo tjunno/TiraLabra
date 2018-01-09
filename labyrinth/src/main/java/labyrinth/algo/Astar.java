@@ -63,6 +63,7 @@ function reconstruct_path(cameFrom, current)
 package labyrinth.algo;
 
 import java.util.*;
+import labyrinth.struct.MinHeap;
 
 /**
  *
@@ -84,22 +85,21 @@ public class Astar {
             return 0;
         }
         
-        double[] tostart = new double[map.length];
-        int[] path = new int[map.length];
-        boolean[] visited = new boolean[map.length];
+        double[] tostart = new double[map.length+1];
+        int[] path = new int[map.length+1];
+        boolean[] visited = new boolean[map.length+1];
         for (int i = 0; i <= map.length; i++) {
             tostart[i] = Integer.MAX_VALUE;
             path[i] = -1;          
         }                    
         tostart[start] = 0;
-        PriorityQueue<Anode> prio = new PriorityQueue(map.length, new AComp(map[end].getX(), map[end].getY()));
+        //PriorityQueue<Anode> prio = new PriorityQueue<>(map.length, new AComp(map[end].getX(), map[end].getY()));
+        MinHeap<Anode> prio = new MinHeap<>(map.length, new AComp(map[end].getX(), map[end].getY()));
         prio.add(new Anode(start, (int) tostart[start], map[start].getX(), map[start].getY()));
         while(!prio.isEmpty()){
             Anode anode = prio.poll();
             int i = anode.getId();
-            if (visited[end]){
-                break;
-            }
+
             if(visited[i]){
                 continue;
             }

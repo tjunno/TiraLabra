@@ -42,8 +42,8 @@ public class Dijkstra {
  * @return path cost for now
  */
     public double search(Node[] map, int start, int end){
-        //MinHeap<Weight> prio = new MinHeap(new DComp());
-        PriorityQueue<Weight> prio = new PriorityQueue(new DComp());
+        MinHeap<Weight> prio = new MinHeap<>(new DComp());
+        //PriorityQueue<Weight> prio = new PriorityQueue<>(new DComp());
         double[] dist = new double[map.length+1];
         int[] path = new int[map.length+1];
         boolean[] visited = new boolean[map.length+1];
@@ -58,6 +58,7 @@ public class Dijkstra {
             Weight weight = prio.poll();
             int i = weight.getI();
             double distance = weight.getW();
+            
             if(visited[i]){
                 continue;
             }

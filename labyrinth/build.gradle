@@ -36,5 +36,7 @@ jacocoTestReport {
         html.enabled = true
     }
 }
-
+compileJava {
+    options.compilerArgs << "-Xlint:unchecked" << "-Xlint:deprecation"
+}
 check.dependsOn jacocoTestReport
