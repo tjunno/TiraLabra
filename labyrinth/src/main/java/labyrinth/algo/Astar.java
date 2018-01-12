@@ -91,24 +91,25 @@ public class Astar {
         for (int i = 0; i <= map.length; i++) {
             tostart[i] = Integer.MAX_VALUE;
             path[i] = -1;          
-        }                    
+        }          
+        
         tostart[start] = 0;
         //PriorityQueue<Anode> prio = new PriorityQueue<>(map.length, new AComp(map[end].getX(), map[end].getY()));
         MinHeap<Anode> prio = new MinHeap<>(map.length, new AComp(map[end].getX(), map[end].getY()));
-        prio.add(new Anode(start, (int) tostart[start], map[start].getX(), map[start].getY()));
+        prio.add(new Anode(start, tostart[start], map[start].getX(), map[start].getY()));       
         while(!prio.isEmpty()){
             Anode anode = prio.poll();
             int i = anode.getId();
-
             if(visited[i]){
                 continue;
             }
+            
             visited[i] = true;
-            for (int j = 0; j < map[i].getWeights().size(); i++) {
-                Weight next = map[i].getWeights().get(i);
+            for (int j = 0; j < map[i].getWeights().size(); j++) {
+                Weight next = map[i].getWeights().get(j);
                 if(tostart[next.getI()] > tostart[i] + next.getW()){
                     tostart[next.getI()] = tostart[i] + next.getW();
-                    prio.add(new Anode(next.getI(), (int) tostart[next.getI()], map[next.getI()].getX(), map[next.getI()].getY()));
+                    prio.add(new Anode(next.getI(), tostart[next.getI()], map[next.getI()].getX(), map[next.getI()].getY()));
                     path[next.getI()] = i;
                 }
             }

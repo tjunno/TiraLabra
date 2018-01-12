@@ -5,9 +5,10 @@ package labyrinth.algo;
  * @author Tuomas Junno
  */
 public class Anode {
-    private int id, x, y, start, end;
+    private int id, x, y;
+    private double start, end;
     
-    public Anode(int id, int start, int x, int y){
+    public Anode(int id, double start, int x, int y){
         this.id = id;
         this.start = start;
         this.x = x;
@@ -24,13 +25,13 @@ public class Anode {
     public int getY(){
         return y;
     }
-    public int getStart(){
+    public double getStart(){
         return start;
     }
-    public int getEnd(){
+    public double getEnd(){
         return end;
     }
-    public void setEnd(int toend){
+    public void setEnd(double toend){
         this.end = toend;
     }
 }

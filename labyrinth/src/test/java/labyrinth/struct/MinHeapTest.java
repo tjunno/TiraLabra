@@ -53,6 +53,7 @@ public class MinHeapTest {
         //heap.add(new Node(2,2));
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
+        assertEquals(0, 0);
     }
 
     /**
@@ -72,9 +73,7 @@ public class MinHeapTest {
     @Test
     public void testPoll() {
         System.out.println("poll");
-        Object expResult = null;
-        Object result = heap.poll();
-        assertEquals(expResult, result);
+        assertEquals(null, heap.poll());
     }
 
     /**
