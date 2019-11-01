@@ -1,17 +1,17 @@
 ## Viikkoraportti 1
 
-### Mitä on tullut tehtyä
+### Mitä olen tehnyt tällä viikolla
 
-Tällä viikolla on suoritettu rekisteröinti kurssille ja muita tarvittavia kurssiasioita. Myös aihetta on tullut pohdittua ja aikataulutusta on mietietty. Labyrintissä reittiä ratkaisevia algoritmeja pitäisi tehdä useampia. Ohjelman rakenteita ja tarvittavia on tullut viriteltyä ja testailtua.
+Rekisteröinti kurssille ja labtooliin suoritettu. Githubia päivitelty. Koodausympäristö asetettu toimintaan.
 
-### Ajankäyttö
+### Miten ohjelma on edistynyt
 
-Aikaa on kulunut kurssiasioihin. Aikaa on käytetty myös kehitysympäristön lisävirittämiseen. Aikaa voi arvioida kuluneen noin 10 tuntia.
+Ohjelma ei ole koodillisesti vielä edennyt.
 
-### Vaikeudet
+### Mitä opin tällä viikolla / tänään
 
-Lisäalgoritmien valinta on tuottanut hieman pohdintaa kuten myös kurssiasiat.
+Palauteltu muistiin javan ihmeellistä maailmaa ja opittu myös että kannattaisi tehdä asiat loppuun ajallaan.
 
-### Tulevaisuus
+### Mikä jäi epäselväksi tai tuottanut vaikeuksia
 
-Projektia pitäisi saada huomattavasti eteenpäin lähiaikoina.
+Miten tarkalleen kannattaisi jatkaa projektia.

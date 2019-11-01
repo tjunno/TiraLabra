@@ -8,6 +8,7 @@ import labyrinth.algo.*;
 public class Labyrinth {
     
     /**
+     * 
      * Main Labyrinth class
      */
     
@@ -16,7 +17,7 @@ public class Labyrinth {
     }
 
     /**
-     * Main
+     * 
      * (testing for now)
      * 
      * @param args 
