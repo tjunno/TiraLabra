@@ -18,6 +18,8 @@ if (!hasProperty('mainClass')) {
     ext.mainClass = 'labyrinth.Labyrinth'
 }
 
+mainClassName = 'labyrinth.Labyrinth'
+
 repositories {
     mavenCentral()
     // You may define additional repositories, or even remove "mavenCentral()".
