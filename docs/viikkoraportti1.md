@@ -10,7 +10,7 @@ Ohjelma ei ole koodillisesti vielä edennyt.
 
 ### Mitä opin tällä viikolla / tänään
 
-Palauteltu muistiin javan ihmeellistä maailmaa ja opittu myös että kannattaisi tehdä asiat loppuun ajallaan.
+Palauteltu muistiin Javan ihmeellistä maailmaa ja opittu myös että kannattaisi tehdä asiat loppuun ajallaan.
 
 ### Mikä jäi epäselväksi tai tuottanut vaikeuksia
 
