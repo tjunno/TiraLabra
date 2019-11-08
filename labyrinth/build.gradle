@@ -21,7 +21,8 @@ if (!hasProperty('mainClass')) {
 mainClassName = 'labyrinth.Labyrinth'
 
 repositories {
-    mavenCentral()
+    jcenter()
+    //mavenCentral()
     // You may define additional repositories, or even remove "mavenCentral()".
     // Read more about repositories here:
     //   http://www.gradle.org/docs/current/userguide/dependency_management.html#sec:repositories
@@ -31,14 +32,18 @@ dependencies {
     // TODO: Add dependencies here ...
     // You can read more about how to add dependency here:
     //   http://www.gradle.org/docs/current/userguide/dependency_management.html#sec:how_to_declare_your_dependencies
-    testCompile group: 'junit', name: 'junit', version: '4.10'
+    //testCompile group: 'junit', name: 'junit', version: '4.10'
+    implementation 'com.google.guava:guava:27.0.1-jre'
+    testImplementation 'junit:junit:4.12'
 }
 checkstyle {
-    toolVersion "7.6.1"
+   toolVersion "8.26"
+   //configFile = file("${rootDir}/config/checkstyle/checkstyle.xml")
 }
 
 run {
     standardInput = System.in
+    standardOutput = System.out
 }
 
 jacocoTestReport {
