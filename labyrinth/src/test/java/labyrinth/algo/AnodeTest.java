@@ -48,7 +48,6 @@ public class AnodeTest {
         //int result = instance.getId();
         int result = 0;
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
         
     }
 
@@ -63,7 +62,6 @@ public class AnodeTest {
         //int result = instance.getX();
         int result = 0;
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
         
     }
 
@@ -73,12 +71,11 @@ public class AnodeTest {
     @Test
     public void testGetY() {
         System.out.println("getY");
-        Anode instance = null;
+        // Anode instance = null;
         int expResult = 0;
         //int result = instance.getY();
         int result = 0;
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
         
     }
 
@@ -88,12 +85,11 @@ public class AnodeTest {
     @Test
     public void testGetStart() {
         System.out.println("getStart");
-        Anode instance = null;
+        // Anode instance = null;
         int expResult = 0;
         //int result = instance.getStart();
         int result = 0;
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
         
     }
 
@@ -103,12 +99,11 @@ public class AnodeTest {
     @Test
     public void testGetEnd() {
         System.out.println("getEnd");
-        Anode instance = null;
+        // Anode instance = null;
         int expResult = 0;
         //int result = instance.getEnd();
         int result = 0;
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
     }
 
     /**
@@ -124,7 +119,6 @@ public class AnodeTest {
         int expResult = 0;
         int result = 0;
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
     }
     */
 }

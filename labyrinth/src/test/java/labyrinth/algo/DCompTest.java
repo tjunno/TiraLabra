@@ -54,7 +54,7 @@ public class DCompTest {
         int expResult = 0;
         int result = instance.compare(o1, o2);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
+    
     }
     */
 

@@ -5,7 +5,7 @@ import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import static org.junit.Assert.*;
+//import static org.junit.Assert.*;
 
 /**
  *
@@ -34,8 +34,7 @@ public class AstarTest {
 
     @Test
     public void testSomeMethod() {
-        // TODO review the generated test code and remove the default call to fail.
-        //fail("The test case is a prototype.");
+    
     }
 
     /**
@@ -46,8 +45,6 @@ public class AstarTest {
         //System.out.println("search");
         //Astar instance = null;
         //instance.search();
-        // TODO review the generated test code and remove the default call to fail.
-        //fail("The test case is a prototype.");
     }
 
     /**
@@ -56,8 +53,8 @@ public class AstarTest {
     @Test
     public void testReconstructPath() {
         System.out.println("reconstructPath");
-        Astar instance = null;
-        // TODO review the generated test code and remove the default call to fail.
+    //  Astar instance = null;
+        
     }
     
 }

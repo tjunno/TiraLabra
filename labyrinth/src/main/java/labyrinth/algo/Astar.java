@@ -62,7 +62,7 @@ function reconstruct_path(cameFrom, current)
 */
 package labyrinth.algo;
 
-import java.util.*;
+// import java.util.*;
 import labyrinth.struct.MinHeap;
 
 /**

@@ -1,5 +1,5 @@
 package labyrinth;
-import java.util.*;
+// import java.util.*;
 import labyrinth.algo.*;
 /**
  * 
@@ -34,7 +34,7 @@ public class Labyrinth {
         int e = reader.nextInt();
         Node[] foo = GraphBuilder.GraphBuilder(x, x);
         */
-        Node[] foo = GraphBuilder.GraphBuilder(100, 100);
+        Node[] foo = GraphBuilder.Builder(100, 100);
         
         
         nicePrint(foo);

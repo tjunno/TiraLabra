@@ -7,8 +7,8 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import labyrinth.algo.*;
-import java.util.*;
-import org.junit.Ignore;
+//import java.util.*;
+//import org.junit.Ignore;
 
 /**
  *
@@ -18,8 +18,14 @@ public class MinHeapTest {
     MinHeap<Node> heap;
     
     
+    // public MinHeapTest() {
+    //     this.heap = new MinHeap(new DComp());
+        
+    // }
+
     public MinHeapTest() {
-        this.heap = new MinHeap(new DComp());
+        @SuppressWarnings({"unchecked", "rawtypes"}) MinHeap<Node> minHeap = new MinHeap(new DComp());
+        this.heap = minHeap;
         
     }
     
@@ -51,8 +57,6 @@ public class MinHeapTest {
         System.out.println("add");
         //heap.add(new Node(1,1));
         //heap.add(new Node(2,2));
-        // TODO review the generated test code and remove the default call to fail.
-        //fail("The test case is a prototype.");
         assertEquals(0, 0);
     }
 

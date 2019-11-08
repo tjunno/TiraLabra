@@ -26,7 +26,7 @@
 */
 
 package labyrinth.algo;
-import java.util.*;
+// import java.util.*;
 import labyrinth.struct.*;
 /**
  * Dijkstras algorithm for searching

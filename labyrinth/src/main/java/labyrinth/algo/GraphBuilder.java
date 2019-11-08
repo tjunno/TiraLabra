@@ -13,7 +13,7 @@ public class GraphBuilder {
      * @param y Y-coordinate
      * @return graph
      */
-    public static Node[] GraphBuilder(int x, int y){
+    public static Node[] Builder(int x, int y){
 
         Node[] g = new Node[x*y];
         for (int i = 0; i<x; i++){          

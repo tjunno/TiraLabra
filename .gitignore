@@ -26,8 +26,10 @@ hs_err_pid*
 
 .vscode
 .gradle
+.classpath
+.project
 
-/build/
+build/
 
 gradle-app.setting
 
@@ -35,6 +37,6 @@ gradle-app.setting
 
 .gradletasknamecache
 
-/labyrinth/.nb-gradle/
-/labyrinth/build/
-/labyrinth/.gradle/
+.nb-gradle/
+
+.settings/

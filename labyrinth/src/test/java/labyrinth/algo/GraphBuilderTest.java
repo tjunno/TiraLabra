@@ -45,7 +45,7 @@ public class GraphBuilderTest {
         System.out.println("GraphBuilder");
         int x = 2;
         int y = 2;
-        Node[] result = GraphBuilder.GraphBuilder(x, y);
+        Node[] result = GraphBuilder.Builder(x, y);
         assertEquals(4, result.length);
 
     }
@@ -59,9 +59,9 @@ public class GraphBuilderTest {
         Node node = new Node(0,0);
         int x = 1;
         int y = 1;
-        GraphBuilder instance = new GraphBuilder();
+     //   GraphBuilder instance = new GraphBuilder();
         GraphBuilder.addWeights(node, x, y);
-        String expResult = "";
+     //   String expResult = "";
         assertEquals(0, 0);
         
 

@@ -14,7 +14,8 @@ public class MinHeap<T> {
     private int size;
     
     public MinHeap(int initsize, Comparator<T> c){
-        this.heap = (T[])new Object[initsize];
+        @SuppressWarnings("unchecked") T[] h = (T[])new Object[initsize];
+        this.heap = h;
         this.c = c;
     }
 
@@ -91,7 +92,7 @@ public class MinHeap<T> {
         }
     }
     private void upsize() {       
-        T[] n = (T[]) new Object[this.heap.length * 2];
+        @SuppressWarnings("unchecked") T[] n = (T[]) new Object[this.heap.length * 2];
         //System.arraycopy(this.heap, 0, n, 0, this.heap.length);
         for(int i=0; i<this.heap.length; i++){
             n[i] = this.heap[i];
