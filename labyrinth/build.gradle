@@ -36,9 +36,9 @@ dependencies {
     implementation 'com.google.guava:guava:27.0.1-jre'
     testImplementation 'junit:junit:4.12'
 }
+
 checkstyle {
-   toolVersion "8.26"
-   //configFile = file("${rootDir}/config/checkstyle/checkstyle.xml")
+	toolVersion "8.17"
 }
 
 run {
