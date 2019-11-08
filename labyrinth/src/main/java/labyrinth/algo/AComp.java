@@ -1,7 +1,8 @@
 package labyrinth.algo;
 import java.util.Comparator;
 /**
- * Compares for Astar
+ * 
+ * Compare for Astar
  * @author Tuomas Junno
  */
 public class AComp implements Comparator<Anode> {
