@@ -1,11 +1,13 @@
 package labyrinth.struct;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import labyrinth.algo.DComp;
@@ -22,20 +24,24 @@ public class MinHeapTest {
      * minheaptest
      */
     private MinHeap<Node> heap;
-
+    /**.
+     * init size
+     */
+    private final int size = 10;
     // public MinHeapTest() {
     // this.heap = new MinHeap(new DComp());
     // }
 
+    /*
     /**
      * . sfad
-     */
+     *
     public MinHeapTest() {
         @SuppressWarnings({ "unchecked", "rawtypes" })
         MinHeap<Node> minHeap = new MinHeap(new DComp());
         this.heap = minHeap;
 
-    }
+    }*/
     /**
      * . sfad
      */
@@ -49,22 +55,19 @@ public class MinHeapTest {
     public static void tearDownClass() {
     }
     /**
-     * . sfad
+     * . set things up
      */
     @Before
     public void setUp() {
+        @SuppressWarnings({ "unchecked", "rawtypes" })
+        MinHeap<Node> minHeap = new MinHeap(size, new DComp());
+        this.heap = minHeap;
     }
     /**
-     * . sfad
+     * . tear things down
      */
     @After
     public void tearDown() {
-    }
-    /**
-     * . sfad
-     */
-    @Test
-    public void testSomeMethod() {
     }
 
     /**
@@ -73,29 +76,26 @@ public class MinHeapTest {
     @Test
     public void testAdd() {
         System.out.println("add");
-        // heap.add(new Node(1,1));
-        // heap.add(new Node(2,2));
-        assertEquals(0, 0);
+        heap.add(new Node(1, 1));
+        assertFalse("Should not be empty", heap.isEmpty());
     }
 
     /**
      * Test of swap method, of class MinHeap.
      */
+    @Ignore
     @Test
     public void testSwap() {
         System.out.println("swap");
-        int i = 0;
-        int j = 0;
-        heap.swap(i, j);
     }
 
     /**
      * Test of poll method, of class MinHeap.
      */
+    @Ignore
     @Test
     public void testPoll() {
         System.out.println("poll");
-        assertEquals(null, heap.poll());
     }
 
     /**
@@ -104,8 +104,6 @@ public class MinHeapTest {
     @Test
     public void testIsEmpty() {
         System.out.println("isEmpty");
-        boolean expResult = true;
-        boolean result = heap.isEmpty();
-        assertEquals(expResult, result);
+        assertTrue("Heap is not empty, heap is failing", heap.isEmpty());
     }
 }

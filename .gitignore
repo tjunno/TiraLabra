@@ -30,6 +30,7 @@ hs_err_pid*
 .project
 
 build/
+nbproject/
 
 gradle-app.setting
 

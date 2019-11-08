@@ -1,21 +1,19 @@
 # Määrittelydokumentti
 
-Aiheena on reitinetsintä labyrintissä
+Aiheena on etsiä labyrintissä reitti alkupistestä loppupisteeseen mahdollisimman nopeasti.
 
-Tarkoituksena on etsiä labyrintissä nopein reitti alusta loppuun.
+Tutkinnan alla ovat algoritmeista näillä näkymin ainakin AStar ja Dijkstra. Näiden lisäksi toteutetaan vielä mahdollisuuksien mukaan jokin juurikin labyrinttien ratkaisemiseen erikoistunut algoritmi. Vaihtoehtoisesti laajennetaan algoritmeilla ratkaistavaa kohdetta johonkin haastavampaan. Tämä huomioon ottaen puhutaan kohteesta jatkossa tässä dokumentissa toistaiseksi vielä kuitenkin labyrinttinä. Kekona käytetään minimikekoa.
 
-Algoritmit joita olisi tarkoitus käyttää ja tutkia ovat aluksi ainakin AStar ja Dijkstra. Kekona käytetään minimikekoa.
+Ongelma mikä olisi ratkaistavana on reitinhaku labyrintissä ja tutkia mikä algoritmi suoriutuu työstä nopeiten. Ratkaistava ongelma on ikuisen mielenkiintoinen ja reittialgoritmeihin liittyy monia käytännön käyttötapauksia, kuten myös historiallista näkökulmaa koko tietojenkäsittelytieteen kehityksen kannalta. Tällä hetkellä nämä valinnankohteeksi päätyneet algoritmit edustustavat riittävällä kattavuudella keskeisiä lähtökohtia ongelman ratkaisuja.
 
-Ongelma mikä olisi tarkoitus ratkaista on reitinhaku labyrintissä. Ratkaistava ngelma on riittävän mielenkiintoinen ja siihen liittyy monia erinäisiä käyttötarkoituksia, kuten myös historiallista näkökulmaa algoritmien osalta. Valitut algoritmit ovat oleellisia tämän ongelman ratkaisussa.
-
-Ohjelma saa syötteenään labyrintin minkä läpi olisi löydettävä alusta loppuun lisäyllätyksineen. Labyrintin ruudut ovat solmut tavittavine tietoineen.
+Ohjelma saa syötteenään labyrintin mahdollisine lisäyllätyksineen minkä läpi olisi löydettävä alkupisteestä loppupisteeseen mahdollisimman nopeasti. Käytettävä labyrintti tullaan generoimaan alustavasti tässä vaiheessa jollakin sopivalla ohjelmalla.
 
 Aika- ja tilavaativuudet mitä algoritmien osalta alustavasti tavoitellaan:
 
 * Dijkstran osalta aikavaativuutena on nyt huonoimmillaan O(|V|²) ja tässä tavoittena oleva minimikekoa käyttävä ratkaisu O((|V|+|E|)log|V|). Tilavaativuutena on O(|V|).
 * A* aikavaativuus on vaihtelee, mutta on huonoimmillaan sama kuin Dijkstrassa eli O((|V|+|E|)log|V|) ja tilavaativuutena O(|V|).
 ### Lähteet
-* http://theory.stanford.edu/%7Eamitp/GameProgramming/AStarComparison.html
+* http://theory.stanford.edu/%7Eamitp/GameProgramming/AStarComparison.html 
 * https://en.wikipedia.org/wiki/A*_search_algorithm
 * https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm
 * Russell and Norvig: Artificial Intelligence, A Modern Approach
