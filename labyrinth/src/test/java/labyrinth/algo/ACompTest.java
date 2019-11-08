@@ -1,33 +1,44 @@
 package labyrinth.algo;
 
+import static org.junit.Assert.assertEquals;
+
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import static org.junit.Assert.*;
 
 /**
  *
  * @author Tuomas Junno
  */
 public class ACompTest {
-    
+    /**.
+     * Nodes
+     */
     public ACompTest() {
     }
-    
+    /**.
+     * Nodes
+     */
     @BeforeClass
     public static void setUpClass() {
     }
-    
+    /**.
+     * Nodes
+     */
     @AfterClass
     public static void tearDownClass() {
     }
-    
+    /**.
+     * Nodes
+     */
     @Before
     public void setUp() {
     }
-    
+    /**.
+     * Nodes
+     */
     @After
     public void tearDown() {
     }
@@ -45,5 +56,5 @@ public class ACompTest {
         int result = instance.compare(o1, o2);
         assertEquals(expResult, result);
     }
-    
+
 }

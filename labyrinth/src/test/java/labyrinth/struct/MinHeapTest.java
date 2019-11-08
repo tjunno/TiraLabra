@@ -1,12 +1,15 @@
 package labyrinth.struct;
 
+import static org.junit.Assert.assertEquals;
+
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import static org.junit.Assert.*;
-import labyrinth.algo.*;
+
+import labyrinth.algo.DComp;
+import labyrinth.algo.Node;
 //import java.util.*;
 //import org.junit.Ignore;
 
@@ -15,36 +18,51 @@ import labyrinth.algo.*;
  * @author Tuomas Junno
  */
 public class MinHeapTest {
-    MinHeap<Node> heap;
-    
-    
+    /**.
+     * minheaptest
+     */
+    private MinHeap<Node> heap;
+
     // public MinHeapTest() {
-    //     this.heap = new MinHeap(new DComp());
-        
+    // this.heap = new MinHeap(new DComp());
     // }
 
+    /**
+     * . sfad
+     */
     public MinHeapTest() {
-        @SuppressWarnings({"unchecked", "rawtypes"}) MinHeap<Node> minHeap = new MinHeap(new DComp());
+        @SuppressWarnings({ "unchecked", "rawtypes" })
+        MinHeap<Node> minHeap = new MinHeap(new DComp());
         this.heap = minHeap;
-        
+
     }
-    
+    /**
+     * . sfad
+     */
     @BeforeClass
     public static void setUpClass() {
     }
-    
+    /**
+     * . sfad
+     */
     @AfterClass
     public static void tearDownClass() {
     }
-    
+    /**
+     * . sfad
+     */
     @Before
     public void setUp() {
     }
-    
+    /**
+     * . sfad
+     */
     @After
     public void tearDown() {
     }
-
+    /**
+     * . sfad
+     */
     @Test
     public void testSomeMethod() {
     }
@@ -55,8 +73,8 @@ public class MinHeapTest {
     @Test
     public void testAdd() {
         System.out.println("add");
-        //heap.add(new Node(1,1));
-        //heap.add(new Node(2,2));
+        // heap.add(new Node(1,1));
+        // heap.add(new Node(2,2));
         assertEquals(0, 0);
     }
 

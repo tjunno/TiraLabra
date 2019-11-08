@@ -1,32 +1,47 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package labyrinth.algo;
 
 /**
- * Weight
+ * . Weight
+ *
  * @author Tuomas Junno
  */
 public class Weight {
-    private final int i;
-    private final double w;
-    
     /**
-     * Weight
-     * @param i
-     * @param w 
+     * . i
      */
-    public Weight(int i, double w){
-        this.i = i;
-        this.w = w;
-    }    
-    public int getI(){
+    private final int i;
+    /**
+     * . w
+     */
+    private final double w;
+
+    /**
+     * . Weight
+     *
+     * @param i2 i
+     * @param w2 w
+     */
+    public Weight(final int i2, final double w2) {
+        this.i = i2;
+        this.w = w2;
+    }
+
+    /**
+     * . getI
+     *
+     * @return i
+     */
+
+    public final int getI() {
         return i;
     }
-    public double getW(){
+
+    /**
+     * . getW
+     *
+     * @return w
+     */
+    public final double getW() {
         return w;
     }
 

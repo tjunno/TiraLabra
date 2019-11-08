@@ -1,0 +1,4 @@
+/**.
+ * labyrinth
+ */
+package labyrinth;

@@ -38,7 +38,7 @@ dependencies {
 }
 
 checkstyle {
-	toolVersion "8.17"
+	toolVersion "8.26"
 }
 
 run {

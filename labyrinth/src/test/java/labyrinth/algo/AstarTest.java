@@ -12,29 +12,41 @@ import org.junit.Test;
  * @author Tuomas Junno
  */
 public class AstarTest {
-    
+     /**
+     * . f
+     */
     public AstarTest() {
     }
-    
+     /**
+     * . f
+     */
     @BeforeClass
     public static void setUpClass() {
     }
-    
+     /**
+     * . f
+     */
     @AfterClass
     public static void tearDownClass() {
     }
-    
+     /**
+     * . f
+     */
     @Before
     public void setUp() {
     }
-    
+     /**
+     * . f
+     */
     @After
     public void tearDown() {
     }
-
+     /**
+     * . f
+     */
     @Test
     public void testSomeMethod() {
-    
+
     }
 
     /**
@@ -42,9 +54,9 @@ public class AstarTest {
      */
     @Test
     public void testSearch() {
-        //System.out.println("search");
-        //Astar instance = null;
-        //instance.search();
+        // System.out.println("search");
+        // Astar instance = null;
+        // instance.search();
     }
 
     /**
@@ -53,8 +65,8 @@ public class AstarTest {
     @Test
     public void testReconstructPath() {
         System.out.println("reconstructPath");
-    //  Astar instance = null;
-        
+        // Astar instance = null;
+
     }
-    
+
 }

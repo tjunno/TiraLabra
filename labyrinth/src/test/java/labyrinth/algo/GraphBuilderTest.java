@@ -5,34 +5,50 @@
  */
 package labyrinth.algo;
 
+import static org.junit.Assert.assertEquals;
+
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import static org.junit.Assert.*;
+//import static org.junit.Assert.*;
 
 /**
  *
  * @author Tuomas Junno
  */
 public class GraphBuilderTest {
-    
+    /**
+     * . GraphBuilderTest
+     */
     public GraphBuilderTest() {
     }
-    
+
+    /**
+     * . f
+     */
     @BeforeClass
     public static void setUpClass() {
     }
-    
+
+    /**
+     * . f
+     */
     @AfterClass
     public static void tearDownClass() {
     }
-    
+
+    /**
+     * . f
+     */
     @Before
     public void setUp() {
     }
-    
+
+    /**
+     * . f
+     */
     @After
     public void tearDown() {
     }
@@ -45,8 +61,9 @@ public class GraphBuilderTest {
         System.out.println("GraphBuilder");
         int x = 2;
         int y = 2;
-        Node[] result = GraphBuilder.Builder(x, y);
-        assertEquals(4, result.length);
+        final int a = 4;
+        Node[] result = GraphBuilder.builder(x, y);
+        assertEquals(a, result.length);
 
     }
 
@@ -56,15 +73,14 @@ public class GraphBuilderTest {
     @Test
     public void testAddWeights() {
         System.out.println("addWeights");
-        Node node = new Node(0,0);
+        Node node = new Node(0, 0);
         int x = 1;
         int y = 1;
-     //   GraphBuilder instance = new GraphBuilder();
+        // GraphBuilder instance = new GraphBuilder();
         GraphBuilder.addWeights(node, x, y);
-     //   String expResult = "";
+        // String expResult = "";
         assertEquals(0, 0);
-        
 
     }
-    
+
 }

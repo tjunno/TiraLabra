@@ -12,34 +12,41 @@ import org.junit.BeforeClass;
  * @author Tuomas Junno
  */
 public class LabyrinthTest {
-    
+    /**.
+     * f
+     */
     public LabyrinthTest() {
     }
-    
+    /**.
+     * f
+     */
     @BeforeClass
     public static void setUpClass() {
     }
-    
+    /**.
+     * f
+     */
     @AfterClass
     public static void tearDownClass() {
     }
-    
+    /**.
+     * f
+     */
     @Before
     public void setUp() {
     }
-    
+    /**.
+     * f
+     */
     @After
     public void tearDown() {
     }
 
-    /**
-     * Test of main method, of class Labyrinth.
-     */
-    //@Test
-    //public void testMain() {
-        //System.out.println("main");
-        //String[] args = null;
-        //Labyrinth.main(args);
-    //}
-    
+    // @Test
+    // public void testMain() {
+    // System.out.println("main");
+    // String[] args = null;
+    // Labyrinth.main(args);
+    // }
+
 }

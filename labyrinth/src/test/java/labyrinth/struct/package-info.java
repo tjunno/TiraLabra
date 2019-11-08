@@ -1,0 +1,4 @@
+/**.
+ * algo
+ */
+package labyrinth.struct;

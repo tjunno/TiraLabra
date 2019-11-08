@@ -8,7 +8,8 @@ function A*(start, goal)
     openSet := {start}
 
     // For each node, which node it can most efficiently be reached from.
-    // If a node can be reached from many nodes, cameFrom will eventually contain the
+    // If a node can be reached from many nodes, cameFrom will eventually
+    contain the
     // most efficient previous step.
     cameFrom := an empty map
 
@@ -35,20 +36,23 @@ function A*(start, goal)
 
         for each neighbor of current
             if neighbor in closedSet
-                continue		// Ignore the neighbor which is already evaluated.
+                continue// Ignore the neighbor which is already evaluated.
 
-            if neighbor not in openSet	// Discover a new node
+            if neighbor not in openSet// Discover a new node
                 openSet.Add(neighbor)
-            
+
             // The distance from start to a neighbor
-            tentative_gScore := gScore[current] + dist_between(current, neighbor)
+            tentative_gScore := gScore[current] + dist_between(current,
+            neighbor)
             if tentative_gScore >= gScore[neighbor]
-                continue		// This is not a better path.
+                continue// This is not a better path.
 
             // This path is the best until now. Record it!
             cameFrom[neighbor] := current
             gScore[neighbor] := tentative_gScore
-            fScore[neighbor] := gScore[neighbor] + heuristic_cost_estimate(neighbor, goal) 
+            fScore[neighbor] := gScore[neighbor] + heuristic_cost_
+            estimate(neighbor,
+            goal)
 
     return failure
 
@@ -68,74 +72,77 @@ import labyrinth.struct.MinHeap;
 /**
  *
  * @author Tuomas Junno
- * 
+ *
  */
 
-public class Astar {   
-    /**
+public class Astar {
+    /**.
      * AStar algorithm for searching (under construction)
-     * 
-     * @param map
-     * @param start
-     * @param end
-     * @return 
-     */     
-    public double search(Node[] map, int start, int end){  
-        if (start == end){
+     *
+     * @param map map
+     * @param start start
+     * @param end end
+     * @return return
+     */
+    public double search(final Node[] map, final int start, final int end) {
+        if (start == end) {
             return 0;
         }
-        
-        double[] tostart = new double[map.length+1];
-        int[] path = new int[map.length+1];
-        boolean[] visited = new boolean[map.length+1];
+        double[] tostart = new double[map.length + 1];
+        int[] path = new int[map.length + 1];
+        boolean[] visited = new boolean[map.length + 1];
         for (int i = 0; i <= map.length; i++) {
             tostart[i] = Integer.MAX_VALUE;
-            path[i] = -1;          
-        }          
-        
+            path[i] = -1;
+        }
         tostart[start] = 0;
-        //PriorityQueue<Anode> prio = new PriorityQueue<>(map.length, new AComp(map[end].getX(), map[end].getY()));
-        MinHeap<Anode> prio = new MinHeap<>(map.length, new AComp(map[end].getX(), map[end].getY()));
-        prio.add(new Anode(start, tostart[start], map[start].getX(), map[start].getY()));       
-        while(!prio.isEmpty()){
+        //PriorityQueue<Anode> prio =
+        //new PriorityQueue<>(map.length, new AComp(map[end].getX(),
+        //map[end].getY()));
+        MinHeap<Anode> prio = new MinHeap<>(map.length,
+        new AComp(map[end].getX(), map[end].getY()));
+        prio.add(new Anode(start, tostart[start],
+        map[start].getX(), map[start].getY()));
+        while (!prio.isEmpty()) {
             Anode anode = prio.poll();
             int i = anode.getId();
-            if(visited[i]){
+            if (visited[i]) {
                 continue;
             }
-            
+
             visited[i] = true;
             for (int j = 0; j < map[i].getWeights().size(); j++) {
                 Weight next = map[i].getWeights().get(j);
-                if(tostart[next.getI()] > tostart[i] + next.getW()){
+                if (tostart[next.getI()] > tostart[i] + next.getW()) {
                     tostart[next.getI()] = tostart[i] + next.getW();
-                    prio.add(new Anode(next.getI(), tostart[next.getI()], map[next.getI()].getX(), map[next.getI()].getY()));
+                    prio.add(new Anode(next.getI(), tostart[next.getI()],
+                    map[next.getI()].getX(), map[next.getI()].getY()));
                     path[next.getI()] = i;
                 }
             }
         }
-        if (tostart[end] == Integer.MAX_VALUE){
+        if (tostart[end] == Integer.MAX_VALUE) {
             return -1;
         }
-        reconstructPath(path,start,end);
-        return tostart[end];       
+        reconstructPath(path, start, end);
+        return tostart[end];
     }
-    
-    /**
+    /**.
      * Show us the path
      * @param path Path
      * @param start Start
      * @param end End
      */
-    private void reconstructPath(int[] path, int start, int end){
+    private void reconstructPath(final int[] path,
+    final int start, final int end) {
         int next = end;
-        while(true){
+        while (true) {
             System.out.println("Path at tile \n" + next);
-            if(path[next] == -1){
+            if (path[next] == -1) {
                 return;
             }
             next = path[next];
-            if(next == start){
+            if (next == start) {
                 return;
             }
         }
