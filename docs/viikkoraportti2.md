@@ -6,7 +6,7 @@ Koodia lisätty ja muun muossa checkstyle viritetty työllä ja tuskalla kunnoll
 
 ### Miten ohjelma on edistynyt
 
-Ohjelma on edennyt koodillisesti varsinkin koodilliselta kauneudeltaan, mutta ei niinkään ulkoiselta näyttävyydeltään.
+Ohjelma on edennyt koodillisesti varsinkin koodilliselta kauneudeltaan, mutta ei niinkään ulkoiselta näyttävyydeltään. Aikaa on kulunut noin 15 tuntia.
 
 ### Mitä opin tällä viikolla / tänään
 
