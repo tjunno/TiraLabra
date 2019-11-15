@@ -1,4 +1,4 @@
 /**.
- * labyrinth
+ * Labyrinth
  */
 package labyrinth;

@@ -57,7 +57,7 @@ public class Anode {
     }
 
     /**
-     * . getid
+     * . getx
      *
      * @return x
      */
@@ -66,7 +66,7 @@ public class Anode {
     }
 
     /**
-     * . getid
+     * . gety
      *
      * @return y
      */
@@ -93,7 +93,7 @@ public class Anode {
     }
 
     /**
-     * . getid
+     * . setend
      * @param toend toend
      */
     public void setEnd(final double toend) {

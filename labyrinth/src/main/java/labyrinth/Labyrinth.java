@@ -47,7 +47,6 @@ public final class Labyrinth {
         nicePrint(foo);
         Dijkstra bar = new Dijkstra();
         long starttimed = System.currentTimeMillis();
-        // double d = bar.search(foo, s, e);
         double d = bar.search(foo, start, end);
         long endtimed = System.currentTimeMillis();
         System.out.println("Searching took: "
@@ -63,7 +62,7 @@ public final class Labyrinth {
     }
 
     /**
-     * . Niceprint
+     * . Niceprint prints map nicely
      * @param map map
      */
     public static void nicePrint(final Node[] map) {

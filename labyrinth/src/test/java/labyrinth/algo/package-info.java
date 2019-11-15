@@ -1,4 +1,4 @@
 /**.
- * algo
+ * Algorithms
  */
 package labyrinth.algo;

@@ -3,27 +3,27 @@ package labyrinth.struct;
 import java.util.Comparator;
 
 /**
- * . Will be implementing MinHeap
+ * . MinHeap implemention
  *
  * @author Tuomas Junno
  * @param <T>
  */
 public class MinHeap<T> {
     /**
-     * . heap
+     * . Heap
      */
     private T[] heap;
     /**
-     * . comparator
+     * . Comparator
      */
     private Comparator<T> c;
     /**
-     * . size
+     * . Size of the heap.
      */
     private int size;
 
     /**
-     * . Minheap
+     * . Minheap with size.
      *
      * @param initsize initsize
      * @param c2 c2
@@ -36,7 +36,7 @@ public class MinHeap<T> {
     }
 
     /**
-     * . Minheap
+     * . Minheap without size.
      *
      * @param c2 c2
      */
@@ -45,7 +45,7 @@ public class MinHeap<T> {
     }
 
     /**
-     * . Add
+     * . Adds to the heap
      *
      * @param e e
      */
@@ -59,7 +59,7 @@ public class MinHeap<T> {
     }
 
     /**
-     * . swap
+     * . Swap places in the heap.
      *
      * @param i i
      * @param j j
@@ -71,9 +71,9 @@ public class MinHeap<T> {
     }
 
     /**
-     * . poll
+     * . Poll
      *
-     * @return h
+     * @return h heap
      */
     public T poll() {
         if (isEmpty()) {
@@ -91,14 +91,14 @@ public class MinHeap<T> {
         return c2 / 2;
     }
     /**.
-     * isempty
+     * Tests if the heap is empty.
      * @return boolean
      */
     public boolean isEmpty() {
         return size == 0;
     }
     /**.
-     * size
+     * Returns size of the heap.
      * @return size
      */
     public int size() {

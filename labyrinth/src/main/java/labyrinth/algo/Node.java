@@ -51,7 +51,7 @@ public class Node {
         return weights;
     }
     /**.
-     *  Adds weight
+     *  Sets weight
      * @param w weight
      */
     public final void setWeight(final Weight w) {

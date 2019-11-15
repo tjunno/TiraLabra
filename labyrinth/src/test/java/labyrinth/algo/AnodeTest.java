@@ -1,48 +1,43 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package labyrinth.algo;
 
 import static org.junit.Assert.assertEquals;
 
 import org.junit.After;
-import org.junit.AfterClass;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 
 /**
  *
- * @author tjunno
+ * @author Tuomas Junno
  */
 public class AnodeTest {
+    /**.
+     * a
+     */
+    private Anode a;
+    /**.
+     * d
+     */
+    private final double d = 1.2;
+    /**.
+     * dd
+     */
+    private final double dd = 0.1;
     /**.
      * f
      */
     public AnodeTest() {
     }
     /**.
-     * f
-     */
-    @BeforeClass
-    public static void setUpClass() {
-    }
-    /**.
-     * f
-     */
-    @AfterClass
-    public static void tearDownClass() {
-    }
-    /**.
-     * f
+     * setup
      */
     @Before
     public void setUp() {
+        Anode aa = new Anode(1, d, 2, 2);
+        this.a = aa;
     }
     /**.
-     * f
+     * not use
      */
     @After
     public void tearDown() {
@@ -55,10 +50,10 @@ public class AnodeTest {
     public void testGetId() {
         System.out.println("getId");
         // Anode instance = null;
-        int expResult = 0;
+        int expResult = 1;
         // int result = instance.getId();
-        int result = 0;
-        assertEquals(expResult, result);
+        int result = a.getId();
+        assertEquals("Ids are not the same", expResult, result);
 
     }
 
@@ -69,10 +64,10 @@ public class AnodeTest {
     public void testGetX() {
         System.out.println("getX");
         // Anode instance = null;
-        int expResult = 0;
+        int expResult = 2;
         // int result = instance.getX();
-        int result = 0;
-        assertEquals(expResult, result);
+        int result = a.getX();
+        assertEquals("X doesnt match", expResult, result);
 
     }
 
@@ -83,10 +78,10 @@ public class AnodeTest {
     public void testGetY() {
         System.out.println("getY");
         // Anode instance = null;
-        int expResult = 0;
+        int expResult = 2;
         // int result = instance.getY();
-        int result = 0;
-        assertEquals(expResult, result);
+        int result = a.getY();
+        assertEquals("Y doesnt match", expResult, result);
 
     }
 
@@ -97,10 +92,10 @@ public class AnodeTest {
     public void testGetStart() {
         System.out.println("getStart");
         // Anode instance = null;
-        int expResult = 0;
+        double expResult = d;
         // int result = instance.getStart();
-        int result = 0;
-        assertEquals(expResult, result);
+        double result = a.getStart();
+        assertEquals("Start doesnt match", expResult, result, dd);
 
     }
 
@@ -110,18 +105,10 @@ public class AnodeTest {
     @Test
     public void testGetEnd() {
         System.out.println("getEnd");
-        // Anode instance = null;
-        int expResult = 0;
-        // int result = instance.getEnd();
-        int result = 0;
-        assertEquals(expResult, result);
+        a.setEnd(d);
+        double expResult = d;
+        double result = a.getEnd();
+        assertEquals("End doesnt match", expResult, result, dd);
     }
 
-    /*
-     * @Test public void testSetEnd() { System.out.println("setEnd");
-     *  //int toend =
-     * 0; //Anode instance = null; //instance.setEnd(toend);
-     * int expResult = 0; int
-     * result = 0; assertEquals(expResult, result); }
-     */
 }
