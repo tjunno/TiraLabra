@@ -39,7 +39,7 @@ public final class Labyrinth {
          */
         final int x = 100;
         final int y = 100;
-        final int start = 2000;
+        final int start = 920;
         final int end = 54;
 
         Node[] foo = GraphBuilder.builder(x, y);
@@ -49,20 +49,24 @@ public final class Labyrinth {
         long starttimed = System.currentTimeMillis();
         double d = bar.search(foo, start, end);
         long endtimed = System.currentTimeMillis();
-        System.out.println("Searching took: "
-        + (endtimed - starttimed) + "ms. Fastest path is: " + d + ".");
+        //System.out.println("Searching took: "
+        //+ (endtimed - starttimed) + "ms. Fastest path is: " + d + ".");
 
         Astar bar2 = new Astar();
         long starttimea = System.currentTimeMillis();
         double d2 = bar2.search(foo, start, end);
         long endtimea = System.currentTimeMillis();
-        System.out.println("Searching took: "
-        + (endtimea - starttimea) + "ms. Fastest path is: " + d2 + ".");
+        //System.out.println("Searching took: "
+        //+ (endtimea - starttimea) + "ms. Fastest path is: " + d2 + ".");
 
+        System.out.println("Searching with Djikstra took: "
+        + (endtimed - starttimed) + "ms. Fastest path is: " + d + ".");
+        System.out.println("Searching with Astar took: "
+        + (endtimea - starttimea) + "ms. Fastest path is: " + d2 + ".");
     }
 
     /**
-     * . Niceprint prints map nicely
+     * . nicePrint prints map nicely
      * @param map map
      */
     public static void nicePrint(final Node[] map) {

@@ -51,7 +51,7 @@ public class Node {
         return weights;
     }
     /**.
-     *  Sets weight
+     *  setWeight
      * @param w weight
      */
     public final void setWeight(final Weight w) {
@@ -59,7 +59,7 @@ public class Node {
     }
 
     /**.
-     * GetX
+     * getX
      * @return x
      */
     public final int getX() {
@@ -67,7 +67,7 @@ public class Node {
     }
 
     /**.
-     * GetY
+     * getY
      * @return y
      */
 

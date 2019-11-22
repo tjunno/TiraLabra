@@ -1,9 +1,21 @@
 # Toteutusdokumentti
 
-Aiheena on reitinetsintä labyrintissä arkoituksena on etsiä labyrintissä nopein reitti alusta loppuun.
-Käytössä olevat algoritmit ovat AStar ja Dijkstra. Kekona käytetään minimikekoa. Ongelma mikä ratkaistaan on reitinhaku labyrintissä. Ratkaistava ongelma on  mielenkiintoinen ja siihen liittyy monia erinäisiä käyttötarkoituksia, kuten myös historiallista näkökulmaa algoritmien osalta. Ohjelma saa syötteenään labyrintin minkä läpi olisi löydettävä alusta loppuun lisäyllätyksineen. Labyrintin ruudut ovat solmut tavittavine tietoineen. Algoritmien aika- ja tilavaativuudet ovat seuraavat:
-* Dijkstran osalta aikavaativuutena on nyt huonoimmillaan O(|V|²) ja tässä tavoittena oleva minimikekoa käyttävä ratkaisu O((|V|+|E|)log|V|). Tilavaativuutena on O(|V|).
-* A* aikavaativuus on vaihtelee, mutta on huonoimmillaan sama kuin Dijkstrassa eli O((|V|+|E|)log|V|) ja tilavaativuutena O(|V|).
+## Ohjelman yleisrakenne
+
+Ohjelma on useammassa erillisessä osassa joista tärkeimmät ovat algoritmit Djikstra ja Astar, tietorakenteet MinHeap (ja x ja y) (ja käyttöliittymä).
+
+## Saavutetut aika- ja tilavaativuudet
+
+* Dijkstran osalta aikavaativuutena on O((|V|+|E|)log|V|) ja tilavaativuutena O(|V|).
+* A* aikavaativuus on O(\|E\|) ja tilavaativuutena O(|V|).
+
+## Suorituskyky- ja O-analyysivertailu
+
+## Työn mahdolliset puutteet ja parannusehdotukset
+
+## Määrittely
+
+Aiheena on reitinetsintä labyrintissä eli algoritmit etsivät nopeimman reitin labyrintissä reitti alusta loppuun, jonka jälkeen suorittamisessa kulunutta aikaa vertaillaan. Käytössä olevat algoritmit ovat AStar ja Dijkstra. Kekona käytetään minimikekoa. Ratkaistava ongelma on  mielenkiintoinen ja siihen liittyy monia erinäisiä käyttötarkoituksia, kuten myös historiallista näkökulmaa algoritmien osalta. Ohjelma saa syötteenään labyrintin minkä läpi olisi löydettävä alusta loppuun lisäyllätyksineen. Labyrintin ruudut ovat solmut tavittavine tietoineen. 
 
 ### Lähteet
 * http://theory.stanford.edu/%7Eamitp/GameProgramming/AStarComparison.html

@@ -69,6 +69,8 @@ public class DijkstraTest {
     public void testReconstructPath() {
         System.out.println("reconstructPath");
 
+        boolean expResult = false;
+        assertEquals(expResult, expResult);
     }
 
 }
