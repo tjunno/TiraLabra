@@ -6,7 +6,7 @@ Tällä viikolla on koodin uudelleenarviointi ollut työn alla. Samalla on pohdi
 
 ### Miten ohjelma on edistynyt
 
-Suunnittelu on ollut pääasiana tällä viikolla. Ohjelman toimintarunko on kohtalaisessa kunnossa ja joitakin testejä on tehty. Aikaa on kulunut n. 10 tuntia.
+Suunnittelu on ollut pääasiana tällä viikolla. Ohjelman toimintarunko on kohtalaisessa kunnossa ja testikattavuus hiljalleen suurenee. Aikaa on kulunut n. 10 tuntia.
 
 ### Mitä opin tällä viikolla / tänään
 
