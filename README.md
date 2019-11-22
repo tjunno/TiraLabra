@@ -8,6 +8,7 @@ Aiheena reitinetsintä labyrintissä. Algoritmeina A* ja Dijkstra.
 [Toteutusdokumentti ](https://github.com/tjunno/TiraLabra/blob/master/docs/toteutusdokumentti.md)
 [Testausdokumentti ](https://github.com/tjunno/TiraLabra/blob/master/docs/testausdokumentti.md)
 [Käyttöohje ](https://github.com/tjunno/TiraLabra/blob/master/docs/käyttöohje.md)
+
 ## Raportit
 [Viikkoraportti 1](https://github.com/tjunno/TiraLabra/blob/master/docs/viikkoraportti1.md)
 [Viikkoraportti 2](https://github.com/tjunno/TiraLabra/blob/master/docs/viikkoraportti2.md)
