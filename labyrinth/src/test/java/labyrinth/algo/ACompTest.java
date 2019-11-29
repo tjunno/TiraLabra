@@ -43,7 +43,7 @@ public class ACompTest {
     public void tearDown() {
     }
 
-    /**
+    /**.
      * Test of compare method, of class AComp.
      */
     @Test
@@ -56,7 +56,9 @@ public class ACompTest {
         int result = instance.compare(o1, o2);
         assertEquals(expResult, result);
     }
-
+    /**.
+     * Test of compare method, of class AComp.
+     */
     @Test
     public void testCompare2() {
         System.out.println("compare");
@@ -67,7 +69,9 @@ public class ACompTest {
         int result = instance.compare(o1, o2);
         assertEquals(expResult, result);
     }
-
+    /**.
+     * Test of compare method, of class AComp.
+     */
     @Test
     public void testCompare3() {
         System.out.println("compare");

@@ -7,17 +7,10 @@ import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
-import org.junit.Ignore;
 import org.junit.Test;
-
 import labyrinth.algo.DComp;
-import labyrinth.algo.Node;
 import labyrinth.algo.Weight;
 import static org.junit.Assert.assertEquals;
-//import labyrinth.algo.Weight;
-//import static org.junit.Assert.assertEquals;
-//import java.util.*;
-import org.junit.Ignore;
 
 /**
  *
@@ -83,8 +76,8 @@ public class MinHeapTest {
      */
     @Test
     public void testAddSwap() {
-        Weight w = new Weight(1,1);
-        Weight w2 = new Weight(1,2);
+        Weight w = new Weight(1, 1);
+        Weight w2 = new Weight(1, 2);
         System.out.println("add");
         heap.add(w);
         heap.add(w2);

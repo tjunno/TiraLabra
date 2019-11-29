@@ -43,7 +43,7 @@ public class LabyrinthTest {
     @After
     public void tearDown() {
     }
-    
+
     /**.
      * testMain
      */
