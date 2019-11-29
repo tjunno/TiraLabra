@@ -57,4 +57,25 @@ public class ACompTest {
         assertEquals(expResult, result);
     }
 
+    @Test
+    public void testCompare2() {
+        System.out.println("compare");
+        Anode o1 = new Anode(1, 1, 1, 1);
+        Anode o2 = new Anode(1, 2, 1, 2);
+        AComp instance = new AComp(1, 1);
+        int expResult = -1;
+        int result = instance.compare(o1, o2);
+        assertEquals(expResult, result);
+    }
+
+    @Test
+    public void testCompare3() {
+        System.out.println("compare");
+        Anode o1 = new Anode(1, 2, 1, 2);
+        Anode o2 = new Anode(1, 1, 1, 1);
+        AComp instance = new AComp(1, 1);
+        int expResult = 1;
+        int result = instance.compare(o1, o2);
+        assertEquals(expResult, result);
+    }
 }

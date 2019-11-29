@@ -1,4 +1,4 @@
 /**.
  * struct
  */
-package labyrinth.struct;
+package labyrinth.performance;

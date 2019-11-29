@@ -4,6 +4,8 @@ import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
+import org.junit.Ignore;
+import org.junit.Test;
 // import org.junit.Test;
 // import static org.junit.Assert.*;
 
@@ -41,12 +43,16 @@ public class LabyrinthTest {
     @After
     public void tearDown() {
     }
-
-    // @Test
-    // public void testMain() {
-    // System.out.println("main");
-    // String[] args = null;
-    // Labyrinth.main(args);
-    // }
+    
+    /**.
+     * testMain
+     */
+    @Ignore
+    @Test
+    public void testMain() {
+    System.out.println("main");
+    String[] args = null;
+    Labyrinth.main(args);
+    }
 
 }

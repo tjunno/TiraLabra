@@ -87,9 +87,6 @@ public class MinHeap<T> {
         return h;
     }
 
-    private int parent(final int c2) {
-        return c2 / 2;
-    }
     /**.
      * Tests if the heap is empty.
      * @return boolean
@@ -97,12 +94,17 @@ public class MinHeap<T> {
     public boolean isEmpty() {
         return size == 0;
     }
+
     /**.
      * Returns size of the heap.
      * @return size
      */
     public int size() {
         return this.size;
+    }
+
+    private int parent(final int c2) {
+        return c2 / 2;
     }
 
     private int left(final int p) {
