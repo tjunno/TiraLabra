@@ -98,7 +98,17 @@ public class MinHeapTest {
         heap.poll();
         assertTrue("Heap is not empty, poll failed", heap.isEmpty());
     }
-
+    
+    /**
+     * Test of poll method, of class MinHeap.
+     */
+    @Test
+    public void testPoll2() {
+        System.out.println("poll");
+        var w = heap.poll();
+        assertEquals(null, w);
+    }
+    
     /**
      * Test of isEmpty method, of class MinHeap.
      */

@@ -28,7 +28,7 @@ package labyrinth.algo;
 // import java.util.*;
 import labyrinth.struct.MinHeap;;
 /**.
- * Dijkstras algorithm for searching
+ * Dijkstra algorithm for searching
  *
  * @author Tuomas Junno
  */
@@ -42,12 +42,15 @@ public class Dijkstra {
  * @return path cost for now
  */
     public double search(final Node[] map, final int start, final int end) {
+        //if (start == end) {
+        //    return 0;
+        //}
         MinHeap<Weight> prio = new MinHeap<>(new DComp());
         //PriorityQueue<Weight> prio = new PriorityQueue<>(new DComp());
-        double[] dist = new double[map.length + 1];
-        int[] path = new int[map.length + 1];
-        boolean[] visited = new boolean[map.length + 1];
-        for (int i = 0; i <= map.length; i++) {
+        double[] dist = new double[map.length];
+        int[] path = new int[map.length];
+        boolean[] visited = new boolean[map.length];
+        for (int i = 0; i < map.length; i++) {
             dist[i] = Integer.MAX_VALUE;
             path[i] = -1;
         }
@@ -108,7 +111,7 @@ public class Dijkstra {
     final int start, final int end) {
         int next = end;
         while (true) {
-            System.out.println("Path at tile \n" + next);
+            System.out.println("Dijkstra path at tile \n" + next);
             if (path[next] == -1) {
                 return;
             }

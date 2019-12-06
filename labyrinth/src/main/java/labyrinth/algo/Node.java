@@ -85,11 +85,11 @@ public class Node {
         + Arrays.toString(array);
     }
 
-    final double getStart() {
+/*    final double getStart() {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
     final double getEnd() {
         throw new UnsupportedOperationException("Not supported yet.");
-    }
+    }*/
 }

@@ -39,8 +39,8 @@ public final class Labyrinth {
          */
         final int x = 100;
         final int y = 100;
-        final int start = 920;
-        final int end = 54;
+        final int start = 5;
+        final int end = 5;
 
         Node[] foo = GraphBuilder.builder(x, y);
 
@@ -56,13 +56,13 @@ public final class Labyrinth {
         long starttimea = System.currentTimeMillis();
         double d2 = bar2.search(foo, start, end);
         long endtimea = System.currentTimeMillis();
-        //System.out.println("Searching took: "
-        //+ (endtimea - starttimea) + "ms. Fastest path is: " + d2 + ".");
+        System.out.println("Searching with Astar took: "
+        + (endtimea - starttimea) + "ms. Fastest path is: " + d2 + ".");
 
         System.out.println("Searching with Djikstra took: "
         + (endtimed - starttimed) + "ms. Fastest path is: " + d + ".");
-        System.out.println("Searching with Astar took: "
-        + (endtimea - starttimea) + "ms. Fastest path is: " + d2 + ".");
+        //System.out.println("Searching with Astar took: "
+        //+ (endtimea - starttimea) + "ms. Fastest path is: " + d2 + ".");
     }
 
     /**

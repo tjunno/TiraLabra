@@ -84,9 +84,9 @@ public class Astar {
      * @return return
      */
     public double search(final Node[] map, final int start, final int end) {
-        if (start == end) {
-            return 0;
-        }
+        //if (start == end) {
+        //    return 0;
+        //}
         double[] tostart = new double[map.length + 1];
         int[] path = new int[map.length + 1];
         boolean[] visited = new boolean[map.length + 1];
@@ -136,7 +136,7 @@ public class Astar {
     final int start, final int end) {
         int next = end;
         while (true) {
-            System.out.println("Path at tile \n" + next);
+            System.out.println("Astar path at tile \n" + next);
             if (path[next] == -1) {
                 return;
             }
