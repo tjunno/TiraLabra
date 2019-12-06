@@ -2,7 +2,7 @@
 
 ## Ohjelman yleisrakenne
 
-Ohjelma on useammassa erillisessä osassa joista tärkeimmät ovat algoritmit Djikstra ja Astar, tietorakenteet MinHeap (ja x ja y) (ja käyttöliittymä).
+Ohjelma on useammassa erillisessä osassa joista tärkeimmät ovat algoritmit Djikstra ja Astar, tietorakenteet MinHeap (ja x ja y) (ja käyttöliittymä). Toteutuksessa on käytetty Java 11 versiota mitä myös edellytetään ohjelman käytössä.
 
 ## Saavutetut aika- ja tilavaativuudet
 
