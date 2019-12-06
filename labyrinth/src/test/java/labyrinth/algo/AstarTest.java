@@ -15,9 +15,18 @@ import org.junit.Test;
  * @author Tuomas Junno
  */
 public class AstarTest {
-        private final int x = 10;
-        private final int y = 10;
-        Node[] foo;
+    /**.
+     * x
+     */
+    private final int x = 10;
+    /**.
+    * y
+    */
+    private final int y = 10;
+    /**.
+    *  foo
+    */
+    private Node[] foo;
      /**
      * . f
      */
@@ -50,7 +59,7 @@ public class AstarTest {
     @After
     public void tearDown() {
     }
-    
+
     /**
      * Test of search method, of class Astar.
      */
@@ -68,7 +77,7 @@ public class AstarTest {
     /**
      * Test failing of search method, of class Astar.
      */
-    @Test(expected=ArrayIndexOutOfBoundsException.class)
+    @Test(expected = ArrayIndexOutOfBoundsException.class)
     public void testSearchFail() {
         final int start = 1;
         final int end = 1000;
@@ -76,9 +85,11 @@ public class AstarTest {
         double d = star.search(foo, start, end);
         double d2 = 1.4;
         System.out.println(d);
-        assertEquals(d, d2, 0.01);              
+        assertEquals(d, d2, 0.01);
     }
-    
+    /**
+     * Test failing of search method, of class Astar.
+     */
     @Test
     public void testSearchSame() {
         final int start = 1;
@@ -87,9 +98,9 @@ public class AstarTest {
         double d = star.search(foo, start, end);
         double d2 = 0;
         System.out.println(d);
-        assertEquals(d, d2, 0.01);              
+        assertEquals(d, d2, 0.01);
     }
-    /**
+    /*
      * Test of reconstructPath method, of class Astar.
      *
     @Test

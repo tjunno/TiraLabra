@@ -13,9 +13,18 @@ import org.junit.Test;
  * @author Tuomas Junno
  */
 public class DijkstraTest {
-        final int x = 10;
-        final int y = 10;
-        Node[] foo;
+    /**.
+     * x
+     */
+    private final int x = 10;
+    /**.
+    * y
+    */
+    private final int y = 10;
+    /**.
+    *  foo
+    */
+    private Node[] foo;
      /**
      * . f
      */
@@ -48,7 +57,7 @@ public class DijkstraTest {
     @After
     public void tearDown() {
     }
-    
+
     /**
      * Test of search method, of class Astar.
      */
@@ -64,9 +73,9 @@ public class DijkstraTest {
         assertEquals(d, d2, 0.01);
     }
     /**
-     * Test failing of search method, of class Astar.
+     * Test failing of search method, of class Dijkstra.
      */
-    @Test(expected=ArrayIndexOutOfBoundsException.class)
+    @Test(expected = ArrayIndexOutOfBoundsException.class)
     public void testSearchFail() {
         final int start = 1;
         final int end = 100;
@@ -74,9 +83,12 @@ public class DijkstraTest {
         double d = dij.search(foo, start, end);
         double d2 = 1.4;
         System.out.println(d);
-        assertEquals(d2, d, 0.01);              
+        assertEquals(d2, d, 0.01);
     }
-    
+
+    /**.
+     * Test failing of search method, of class Dijkstra.
+     */
     @Test
     public void testSearchSame() {
         System.out.println("search");
@@ -88,7 +100,7 @@ public class DijkstraTest {
         System.out.println(d);
         assertEquals(d2, d, 0.01);
     }
-    
+
     /*
      * Test of reconstructPath method, of class Dijkstra.
      *
