@@ -51,6 +51,12 @@ jacocoTestReport {
         xml.enabled = true
         html.enabled = true
     }
+        afterEvaluate {
+        classDirectories.from = files(classDirectories.files.collect {
+            fileTree(dir: it,
+                    exclude: ['**/Labyrinth**'])
+        })
+    }
 }
 compileJava {
     options.compilerArgs << "-Xlint:unchecked" << "-Xlint:deprecation"
