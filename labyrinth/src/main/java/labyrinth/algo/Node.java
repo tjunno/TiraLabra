@@ -84,12 +84,4 @@ public class Node {
         return "x: " + this.x + ", y: " + this.y + " weights:"
         + Arrays.toString(array);
     }
-
-/*    final double getStart() {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    final double getEnd() {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }*/
 }

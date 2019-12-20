@@ -72,8 +72,8 @@ public final class Labyrinth {
                         "src/main/resources/labyrinth/test4.txt"));
                 break;
             case 5:
-                start = 1529;
-                end = 18118;
+                start = 18118;
+                end = 1529;
 
                 foo = GraphBuilder.builder(new File(
                         "src/main/resources/labyrinth/test5.txt"));

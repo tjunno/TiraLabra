@@ -2,22 +2,16 @@
 
 ## Ohjelman yleisrakenne
 
-Ohjelma on useammassa erillisessä osassa joista tärkeimmät ovat algoritmit Djikstra ja Astar, tietorakenteet MinHeap (ja x ja y) (ja käyttöliittymä). Toteutuksessa on käytetty Java 11 versiota mitä myös edellytetään ohjelman käytössä.
+Ohjelma on useammassa erillisessä osassa joista tärkeimmät ovat algoritmit Djikstra ja Astar, tietorakenteet MinHeap (ja x ja y) (ja käyttöliittymä Labyrinth). Toteutuksessa on käytetty Java 11 versiota mitä myös edellytetään ohjelman käytössä. GraphBuilder muodostaa sille annetusta tiedostosta painoja sisältävän verkon algoritmeille. Nämä sitten työstävät sen läpi muodostaen polun, jonka pituus ja suorituksen nopeus otetaan talteen.
 
 ## Saavutetut aika- ja tilavaativuudet
 
 * Dijkstran osalta aikavaativuutena on O((|V|+|E|)log|V|) ja tilavaativuutena O(|V|).
-* A* aikavaativuus on O(\|E\|) ja tilavaativuutena O(|V|).
-
-## Suorituskyky- ja O-analyysivertailu
+* A* aikavaativuus on O(\|V\|+\|E\|)log|V|) ja tilavaativuutena O(|V|).
 
 ## Työn mahdolliset puutteet ja parannusehdotukset
 
-Tietyt metodit olisi voinut tehdä optimoidummin, mutta niillä ei ole algoritmien toiminnan kanssa sinänsä merkitystä. Algoritmeja olisi voinut olla enemmänkin, mutta ajanpuutteen vuoksi tämä suunnitelma ei koskaan toteutunut.
-
-## Määrittely
-
-Aiheena on reitinetsintä labyrintissä eli algoritmit etsivät nopeimman reitin labyrintissä reitti alusta loppuun, jonka jälkeen suorittamisessa kulunutta aikaa vertaillaan. Käytössä olevat algoritmit ovat AStar ja Dijkstra. Kekona käytetään minimikekoa. Ratkaistava ongelma on  mielenkiintoinen ja siihen liittyy monia erinäisiä käyttötarkoituksia, kuten myös historiallista näkökulmaa algoritmien osalta. Ohjelma saa syötteenään labyrintin minkä läpi olisi löydettävä alusta loppuun lisäyllätyksineen. Labyrintin ruudut ovat solmut tavittavine tietoineen. 
+Tietyt metodit olisi voinut tehdä optimoidummin. Algoritmeja olisi voinut olla enemmänkin, mutta ajanpuutteen vuoksi tämä suunnitelma ei koskaan toteutunut. Luokat olisi varmasti pitänyt järjestellä hieman paremmin, mutta sekin jäi.
 
 ### Lähteet
 * http://theory.stanford.edu/%7Eamitp/GameProgramming/AStarComparison.html

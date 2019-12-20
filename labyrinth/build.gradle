@@ -46,6 +46,14 @@ run {
     standardOutput = System.out
 }
 
+jar {
+  manifest {
+    attributes(
+      'Class-Path': configurations.compile.collect { it.getName() }.join(' '),
+      'Main-Class': 'labyrinth.Labyrinth'
+    )
+  }
+}
 jacocoTestReport {
     reports {
         xml.enabled = true

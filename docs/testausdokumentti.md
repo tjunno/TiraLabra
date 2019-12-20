@@ -85,33 +85,35 @@ Ensimmäisessä testikartassa Astar voitti selkeästi. Ollen huomattavasti nopea
 
 |         | Aika   | Pituus  |
 |---------|--------|---------|
-|Astar    | 9 ms   | 166     |
-|Dijkstra | 14 ms  | 166     |
+|Astar    | 6 ms   | 166     |
+|Dijkstra | 8 ms   | 166     |
 
-Toisessa tapauksessa Astar voitti nopeudessa, mutta hävisi reitin pituudessa.
+Toisessa tapauksessa Astar voitti hienoisesti nopeudessa, mutta hävisi reitin pituudessa.
 
 |         | Aika   | Pituus  |
 |---------|--------|---------|
-|Astar    | 14 ms  | 74      |
-|Dijkstra | 21 ms  | 72      |
+|Astar    | 10 ms  | 74      |
+|Dijkstra | 12 ms  | 72      |
 
 Kolmannen kartan ollessa ensimmäistä vastaavainen on lopputuloskin pitkälti samankaltainen.
 
 |         | Aika   | Pituus  |
 |---------|--------|---------|
 |Astar    | 7 ms   | 333     |
-|Dijkstra | 17 ms  | 333     |
+|Dijkstra | 11 ms  | 333     |
 
-Neljäs labyrintti edustaa hieman erikoisempaa lähestymistapaa. Tässä tapauksessakin Astar voitti nopeudessa, mutta polun pituudessa saapui häviö.
+Neljäs labyrintti edustaa hieman erikoisempaa lähestymistapaa. Tässä tapauksessakin Astar voitti useammin nopeudessa, mutta polun pituudessa saapui häviö.
 
 |         | Aika   | Pituus  |
 |---------|--------|---------|
-|Astar    | 85 ms   | 2158   |
-|Dijkstra | 105 ms  | 2131   |
+|Astar    | 27 ms   | 2158   |
+|Dijkstra | 30 ms  | 2131   |
 
 Viidennessä tapauksessa taistelevat algoritmit pääsivät vaihtelevasti keskimääräisesti kohtalaisen tasaisiin tuloksiin Astarin ollessa kuitenkin useiten nopeampi kuitenkin Dijkstran voittaessa pituudessa.
 
 |         | Aika   | Pituus  |
 |---------|--------|---------|
-|Astar    | 60 ms  | 154     |
-|Dijkstra | 88 ms  | 138     |
+|Astar    | 55 ms  | 140     |
+|Dijkstra | 70 ms  | 138     |
+
+Yleisesti ottaen molemmat algoritmit olivat kohtalaisen lähellä toisiaan voittaen vuorotellen poislukien perinteiset Nethack-tyyliset labyrintit 1 ja 3.

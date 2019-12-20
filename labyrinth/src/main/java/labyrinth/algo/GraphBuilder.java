@@ -10,11 +10,11 @@ import java.io.IOException;
  *
  * @author Tuomas Junno
  */
-public final class GraphBuilder {
+public interface GraphBuilder {
 
-    private GraphBuilder() {
+    /*private GraphBuilder() {
         throw new IllegalStateException("Utility class");
-    }
+    }*/
 
     /**.
      * THE GraphBuilder builds from the map file
@@ -25,7 +25,7 @@ public final class GraphBuilder {
      * @throws java.io.IOException io exception
      */
 
-    public static Node[] builder(final File f) throws FileNotFoundException,
+    static Node[] builder(final File f) throws FileNotFoundException,
     IOException {
         Character cc = ' ';
         BufferedReader read = new BufferedReader(new FileReader(f));
@@ -67,7 +67,7 @@ public final class GraphBuilder {
      * @param x X-coordinate
      * @param y Y-coordinate
      */
-    public static void addWeights(final Node node, final char[][] c,
+    static void addWeights(final Node node, final char[][] c,
      final int x, final int y) {
         final var m = 1.4;
         Character cc = ' ';
@@ -81,7 +81,7 @@ public final class GraphBuilder {
             }
             if (c[node.getX() + 1][node.getY() + 1] == cc) {
                 node.setWeight(new Weight(x + 1, m));
-            }
+            } /*
         } else if (node.getY() == 0 && node.getX() == x - 1) {
             if (c[node.getX() - 1][node.getY()] == cc) {
                 node.setWeight(new Weight(p - 1, 1));
@@ -91,7 +91,7 @@ public final class GraphBuilder {
             }
             if (c[node.getX() - 1][node.getY() + 1] == cc) {
                 node.setWeight(new Weight(p + x - 1, m));
-            }
+            } */
         } else if (node.getY() == 0) {
             if (c[node.getX() - 1][node.getY()] == cc) {
                 node.setWeight(new Weight(p - 1, 1));
@@ -107,7 +107,7 @@ public final class GraphBuilder {
             }
             if (c[node.getX() - 1][node.getY() + 1] == cc) {
                 node.setWeight(new Weight(p + x - 1, m));
-            }
+            } /*
         } else if (node.getX() == 0 && node.getY() == y - 1) {
             if (c[node.getX()][node.getY() - 1] == cc) {
                 node.setWeight(new Weight(p - x, 1));
@@ -127,7 +127,7 @@ public final class GraphBuilder {
             }
             if (c[node.getX() - 1][node.getY() - 1] == cc) {
                 node.setWeight(new Weight(p - x - 1, m));
-            }
+            }*/
         } else if (node.getX() == 0) {
             if (c[node.getX()][node.getY() - 1] == cc) {
                 node.setWeight(new Weight(p - x, 1));
@@ -143,7 +143,7 @@ public final class GraphBuilder {
             }
             if (c[node.getX() + 1][node.getY() + 1] == cc) {
                 node.setWeight(new Weight(p + x + 1, m));
-            }
+            } /*
         } else if (node.getX() == x - 1) {
             if (c[node.getX()][node.getY() - 1] == cc) {
                 node.setWeight(new Weight(p - x, 1));
@@ -159,7 +159,7 @@ public final class GraphBuilder {
             }
             if (c[node.getX() - 1][node.getY() + 1] == cc) {
                 node.setWeight(new Weight(p + x - 1, m));
-            }
+            }*/
         } else if (node.getY() == y - 1) {
             if (c[node.getX()][node.getY() - 1] == cc) {
                 node.setWeight(new Weight(p - x, 1));

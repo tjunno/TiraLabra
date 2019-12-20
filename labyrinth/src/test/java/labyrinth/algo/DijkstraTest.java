@@ -51,7 +51,6 @@ public class DijkstraTest {
                 "src/test/resources/labyrinth/testi.txt"));
         foo2 = GraphBuilder.builder(new File(
                 "src/test/resources/labyrinth/testi2.txt"));
-
     }
      /**
      * . f

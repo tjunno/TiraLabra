@@ -90,7 +90,7 @@ public class Dijkstra {
     final int start, final int end) {
         int next = end;
         while (true) {
-            System.out.println("Dijkstra path at tile \n" + next);
+            //System.out.println("Dijkstra path at tile \n" + next);
             if (path[next] == -1) {
                 return;
             }

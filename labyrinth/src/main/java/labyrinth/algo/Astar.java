@@ -133,7 +133,7 @@ public class Astar {
     final int start, final int end) {
         int next = end;
         while (true) {
-            System.out.println("Astar path at tile \n" + next);
+            //System.out.println("Astar path at tile \n" + next);
             if (path[next] == -1) {
                 return;
             }
