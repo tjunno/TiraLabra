@@ -2,7 +2,7 @@
 
 ## Ohjelman yleisrakenne
 
-Ohjelma on useammassa erillisessä osassa joista tärkeimmät ovat algoritmit Djikstra ja Astar, tietorakenteet MinHeap (ja x ja y) (ja käyttöliittymä Labyrinth). Toteutuksessa on käytetty Java 11 versiota mitä myös edellytetään ohjelman käytössä. GraphBuilder muodostaa sille annetusta tiedostosta painoja sisältävän verkon algoritmeille. Nämä sitten työstävät sen läpi muodostaen polun, jonka pituus ja suorituksen nopeus otetaan talteen.
+Ohjelma on useammassa erillisessä osassa joista tärkeimmät ovat algoritmit Djikstra ja Astar, tietorakenteet MinHeap (ja x ja y) (ja käyttöliittymä Labyrinth). Toteutuksessa on käytetty Java 11 versiota mitä myös edellytetään ohjelman käytössä. GraphBuilder prosessoi tiedoston syötettäväksi algoritmeille. Nämä sitten työstävät sen läpi muodostaen polun, jonka pituus ja suorituksen nopeus otetaan talteen.
 
 ## Saavutetut aika- ja tilavaativuudet
 

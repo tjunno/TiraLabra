@@ -31,12 +31,12 @@ public class Anode {
     private double end;
 
     /**
-     * . Anode
+     * . Anode for Astar
      *
-     * @param id2    i
-     * @param start2 i
-     * @param x2     i
-     * @param y2     i
+     * @param id2    id
+     * @param start2 start
+     * @param x2     x
+     * @param y2     y
      */
     public Anode(final int id2, final double start2,
     final int x2, final int y2) {
@@ -48,7 +48,7 @@ public class Anode {
     }
 
     /**
-     * . getid
+     * . Gets id
      *
      * @return id
      */
@@ -57,7 +57,7 @@ public class Anode {
     }
 
     /**
-     * . getx
+     * . Gets x
      *
      * @return x
      */
@@ -66,7 +66,7 @@ public class Anode {
     }
 
     /**
-     * . gety
+     * . Get y
      *
      * @return y
      */
@@ -75,7 +75,7 @@ public class Anode {
     }
 
     /**
-     * . getstart
+     * . Gets start
      *
      * @return start
      */
@@ -84,7 +84,7 @@ public class Anode {
     }
 
     /**
-     * . getend
+     * . Gets end
      *
      * @return end
      */
@@ -93,7 +93,7 @@ public class Anode {
     }
 
     /**
-     * . setend
+     * . Sets end
      * @param toend toend
      */
     public void setEnd(final double toend) {

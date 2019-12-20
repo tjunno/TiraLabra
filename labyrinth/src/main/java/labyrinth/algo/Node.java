@@ -33,19 +33,10 @@ public class Node {
         this.x = x2;
         this.y = y2;
         this.weights = new ArrayList<>();
-        // this.neighbors = new ArrayList<>();
     }
-    /*
-     *
-     * @param goal
-     *
-     * public void setPath(Node end){ this.path =
-     * Math.abs((this.getX()-end.getX())+(this.getY()-end.getY())); }
-     */
-    // neighbors = new ArrayList<>();
 
     /**.
-     * @return weights
+     * @return weights weights
      */
     public final List<Weight> getWeights() {
         return weights;
