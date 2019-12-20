@@ -1,4 +1,0 @@
-/**.
- * performance
- */
-package labyrinth.performance;
