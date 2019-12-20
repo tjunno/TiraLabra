@@ -1,5 +1,7 @@
 package labyrinth.algo;
 
+import java.io.File;
+import java.io.IOException;
 import static org.junit.Assert.assertEquals;
 
 import org.junit.After;
@@ -14,6 +16,10 @@ import org.junit.Test;
  * @author Tuomas Junno
  */
 public class GraphBuilderTest {
+    /**
+     * . foo
+     */
+    private Node[] foo;
     /**
      * . GraphBuilderTest
      */
@@ -34,11 +40,15 @@ public class GraphBuilderTest {
     public static void tearDownClass() {
     }
 
-    /**
-     * . f
+    /**.
+     * .f
+     * @throws java.io.IOException io
      */
     @Before
-    public void setUp() {
+    public void setUp() throws IOException {
+
+        foo = GraphBuilder.builder(new File("src/test/resources/testi.txt"));
+
     }
 
     /**
@@ -54,28 +64,8 @@ public class GraphBuilderTest {
     @Test
     public void testGraphBuilder() {
         System.out.println("GraphBuilder");
-        int x = 2;
-        int y = 2;
-        final int a = 4;
-        Node[] result = GraphBuilder.builder(x, y);
-        assertEquals(a, result.length);
-
-    }
-
-    /**
-     * Test of addWeights method, of class GraphBuilder.
-     */
-    @Test
-    public void testAddWeights() {
-        System.out.println("addWeights");
-        Node node = new Node(0, 0);
-        int x = 1;
-        int y = 1;
-        // GraphBuilder instance = new GraphBuilder();
-        GraphBuilder.addWeights(node, x, y);
-        // String expResult = "";
-        assertEquals(0, 0);
-
+        final int a = 100;
+        assertEquals(a, foo.length);
     }
 
 }

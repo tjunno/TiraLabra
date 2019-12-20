@@ -1,5 +1,6 @@
 package labyrinth;
 
+import java.io.IOException;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -44,12 +45,12 @@ public class LabyrinthTest {
     public void tearDown() {
     }
 
-    /**.
-     * testMain
+    /**. testMain
+     * @throws java.io.IOException io
      */
     @Ignore
     @Test
-    public void testMain() {
+    public void testMain() throws IOException {
     System.out.println("main");
     String[] args = null;
     Labyrinth.main(args);

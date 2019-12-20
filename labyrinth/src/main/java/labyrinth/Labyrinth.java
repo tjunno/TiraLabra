@@ -1,11 +1,15 @@
 package labyrinth;
 
+import java.io.File;
+import java.io.IOException;
+import java.util.Scanner;
 import labyrinth.algo.Astar;
 import labyrinth.algo.Dijkstra;
 import labyrinth.algo.GraphBuilder;
 import labyrinth.algo.Node;
 
-/**.
+/**
+ * .
  * @author Tuomas Junno
  */
 public final class Labyrinth {
@@ -14,59 +18,105 @@ public final class Labyrinth {
      * .
      * Main Labyrinth class
      */
-
     private Labyrinth() {
 
     }
 
-    /**
-     * .
+    /**.
+     * Runs algorithms at labyrinth
      *
-     * (testing for now)
      *
      * @param args args
+     * @throws java.io.IOException io
      */
-    public static void main(final String[] args) {
+    public static void main(final String[] args) throws IOException {
 
-        /*
-         * Scanner reader = new Scanner(System.in);
-         * System.out.println("Choose dimension of the map:\n"); int x =
-         * reader.nextInt(); int xx = x*x-1;
-         * System.out.println ("Choose startpoint: " +
-         * 0 + "-" + xx); int s = reader.nextInt();
-         * System.out.println("Choose endpoint: " + 0 + "-" + xx); int e =
-         * reader.nextInt(); Node[] foo = GraphBuilder.GraphBuilder(x, x);
-         */
-        final int x = 100;
-        final int y = 100;
-        final int start = 5;
-        final int end = 5;
+        int start;
+        int end;
+        Node[] foo;
+        int x;
+        try (Scanner reader = new Scanner(System.in)) {
+            System.out.println("Choose case: 1, 2, 3, 4 or 5:\n");
+            start = 0;
+            end = 0;
+            foo = null;
+            x = reader.nextInt();
+        }
 
-        Node[] foo = GraphBuilder.builder(x, y);
+        switch (x) {
+            case 1:
+                start = 57;
+                end = 3965;
+                foo = GraphBuilder.builder(
+                        new File("src/main/resources/labyrinth/testi.txt"));
+                break;
+            case 2:
+                start = 189;
+                end = 3445;
 
-        nicePrint(foo);
-        Dijkstra bar = new Dijkstra();
-        long starttimed = System.currentTimeMillis();
-        double d = bar.search(foo, start, end);
-        long endtimed = System.currentTimeMillis();
-        //System.out.println("Searching took: "
-        //+ (endtimed - starttimed) + "ms. Fastest path is: " + d + ".");
+                foo = GraphBuilder.builder(new File(
+                        "src/main/resources/labyrinth/test2.txt"));
+                break;
+            case 3:
+                start = 5;
+                end = 3929;
 
-        Astar bar2 = new Astar();
-        long starttimea = System.currentTimeMillis();
-        double d2 = bar2.search(foo, start, end);
-        long endtimea = System.currentTimeMillis();
-        System.out.println("Searching with Astar took: "
-        + (endtimea - starttimea) + "ms. Fastest path is: " + d2 + ".");
+                foo = GraphBuilder.builder(new File(
+                        "src/main/resources/labyrinth/test3.txt"));
+                break;
+            case 4:
+                start = 2278;
+                end = 17629;
 
-        System.out.println("Searching with Djikstra took: "
-        + (endtimed - starttimed) + "ms. Fastest path is: " + d + ".");
+                foo = GraphBuilder.builder(new File(
+                        "src/main/resources/labyrinth/test4.txt"));
+                break;
+            case 5:
+                start = 12258;
+                end = 18793;
+
+                foo = GraphBuilder.builder(new File(
+                        "src/main/resources/labyrinth/test5.txt"));
+                break;
+            default:
+                System.out.println("Insert correct number");
+        }
+        if (start != 0) {
+            nicePrint(foo);
+            Dijkstra bar = new Dijkstra();
+            long starttimed = System.currentTimeMillis();
+            double d = bar.search(foo, start, end);
+            long endtimed = System.currentTimeMillis();
+            //System.out.println("Searching took: "
+            //+ (endtimed - starttimed) + "ms. Fastest path is: " + d + ".");
+
+            Astar bar2 = new Astar();
+            long starttimea = System.currentTimeMillis();
+            double d2 = bar2.search(foo, start, end);
+            long endtimea = System.currentTimeMillis();
+
+            if (d == -1) {
+                System.out.println("Astar didn't find path!");
+            } else {
+                System.out.println("Searching with Astar took: "
+                        + (endtimea - starttimea)
+                        + "ms. Fastest path is: " + d2 + ".");
+            }
+            if (d2 == -1) {
+                System.out.println("Djikstra didn't find path!");
+            } else {
+                System.out.println("Searching with Djikstra took: "
+                        + (endtimed - starttimed)
+                        + "ms. Fastest path is: " + d + ".");
+            }
+        }
         //System.out.println("Searching with Astar took: "
         //+ (endtimea - starttimea) + "ms. Fastest path is: " + d2 + ".");
     }
 
     /**
-     * . nicePrint prints map nicely
+     * . nicePrint nodes of the map nicely
+     *
      * @param map map
      */
     public static void nicePrint(final Node[] map) {

@@ -1,5 +1,7 @@
 package labyrinth.algo;
 
+import java.io.File;
+import java.io.IOException;
 import static org.junit.Assert.assertEquals;
 
 import org.junit.After;
@@ -16,17 +18,13 @@ import org.junit.Test;
  */
 public class AstarTest {
     /**.
-     * x
-     */
-    private final int x = 10;
-    /**.
-    * y
-    */
-    private final int y = 10;
-    /**.
     *  foo
     */
     private Node[] foo;
+    /**.
+    *  foo2
+    */
+    private Node[] foo2;
      /**
      * . f
      */
@@ -44,13 +42,15 @@ public class AstarTest {
     @AfterClass
     public static void tearDownClass() {
     }
-     /**
-     * . f
+     /**.
+     * .f
+     * @throws java.io.IOException io exception
      */
     @Before
-    public void setUp() {
+    public void setUp() throws IOException {
 
-        foo = GraphBuilder.builder(x, y);
+        foo = GraphBuilder.builder(new File("src/test/resources/testi.txt"));
+        foo2 = GraphBuilder.builder(new File("src/test/resources/testi2.txt"));
 
     }
      /**
@@ -70,9 +70,9 @@ public class AstarTest {
         final int end = 10;
         Astar star = new Astar();
         double d = star.search(foo, start, end);
-        double d2 = 1.4;
+        double d2 = 2;
         System.out.println(d);
-        assertEquals(d, d2, 0.01);
+        assertEquals(d2, d, 0.01);
     }
     /**
      * Test failing of search method, of class Astar.
@@ -82,10 +82,10 @@ public class AstarTest {
         final int start = 1;
         final int end = 1000;
         Astar star = new Astar();
-        double d = star.search(foo, start, end);
+        double d = star.search(foo2, start, end);
         double d2 = 1.4;
         System.out.println(d);
-        assertEquals(d, d2, 0.01);
+        assertEquals(d2, d, 0.01);
     }
     /**
      * Test failing of search method, of class Astar.
@@ -98,16 +98,20 @@ public class AstarTest {
         double d = star.search(foo, start, end);
         double d2 = 0;
         System.out.println(d);
-        assertEquals(d, d2, 0.01);
+        assertEquals(d2, d, 0.01);
     }
-    /*
-     * Test of reconstructPath method, of class Astar.
-     *
+    /**.
+     * Test failing of search method, of class Astar.
+     */
     @Test
-    public void testReconstructPath() {
-        System.out.println("reconstructPath");
-        // Astar instance = null;
-
-    }*/
-
+    public void testSearchNoRoute() {
+        System.out.println("search");
+        final int start = 1;
+        final int end = 50;
+        Dijkstra dij = new Dijkstra();
+        double d = dij.search(foo2, start, end);
+        double d2 = -1;
+        System.out.println(d);
+        assertEquals(d2, d, 0.01);
+    }
 }

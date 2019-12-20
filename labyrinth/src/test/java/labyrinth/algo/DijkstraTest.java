@@ -1,5 +1,7 @@
 package labyrinth.algo;
 
+import java.io.File;
+import java.io.IOException;
 import static org.junit.Assert.assertEquals;
 
 import org.junit.After;
@@ -14,17 +16,13 @@ import org.junit.Test;
  */
 public class DijkstraTest {
     /**.
-     * x
-     */
-    private final int x = 10;
-    /**.
-    * y
-    */
-    private final int y = 10;
-    /**.
     *  foo
     */
     private Node[] foo;
+    /**.
+    *  foo2
+    */
+    private Node[] foo2;
      /**
      * . f
      */
@@ -42,13 +40,15 @@ public class DijkstraTest {
     @AfterClass
     public static void tearDownClass() {
     }
-     /**
-     * . f
+     /**.
+     * .f
+     * @throws java.io.IOException io
      */
     @Before
-    public void setUp() {
+    public void setUp() throws IOException {
 
-        foo = GraphBuilder.builder(x, y);
+        foo = GraphBuilder.builder(new File("src/test/resources/testi.txt"));
+        foo2 = GraphBuilder.builder(new File("src/test/resources/testi2.txt"));
 
     }
      /**
@@ -68,9 +68,9 @@ public class DijkstraTest {
         final int end = 10;
         Dijkstra dij = new Dijkstra();
         double d = dij.search(foo, start, end);
-        double d2 = 1.4;
+        double d2 = 2;
         System.out.println(d);
-        assertEquals(d, d2, 0.01);
+        assertEquals(d2, d, 0.01);
     }
     /**
      * Test failing of search method, of class Dijkstra.
@@ -78,9 +78,9 @@ public class DijkstraTest {
     @Test(expected = ArrayIndexOutOfBoundsException.class)
     public void testSearchFail() {
         final int start = 1;
-        final int end = 100;
+        final int end = 1000;
         Dijkstra dij = new Dijkstra();
-        double d = dij.search(foo, start, end);
+        double d = dij.search(foo2, start, end);
         double d2 = 1.4;
         System.out.println(d);
         assertEquals(d2, d, 0.01);
@@ -101,15 +101,18 @@ public class DijkstraTest {
         assertEquals(d2, d, 0.01);
     }
 
-    /*
-     * Test of reconstructPath method, of class Dijkstra.
-     *
+    /**.
+     * Test failing of search method, of class Dijkstra.
+     */
     @Test
-    public void testReconstructPath() {
-        System.out.println("reconstructPath");
-
-        boolean expResult = false;
-        assertEquals(expResult, expResult);
-    }*/
-
+    public void testSearchNoRoute() {
+        System.out.println("search");
+        final int start = 1;
+        final int end = 50;
+        Dijkstra dij = new Dijkstra();
+        double d = dij.search(foo2, start, end);
+        double d2 = -1;
+        System.out.println(d);
+        assertEquals(d2, d, 0.01);
+    }
 }
