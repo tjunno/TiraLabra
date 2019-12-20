@@ -20,6 +20,9 @@ public class GraphBuilderTest {
      * . foo
      */
     private Node[] foo;
+    /**
+     * . foo2
+     */
     private Node[] foo2;
     /**
      * . GraphBuilderTest
@@ -78,7 +81,7 @@ public class GraphBuilderTest {
     @Test
     public void testGraphBuilder2() {
         System.out.println("GraphBuilder");
-        final int a = 63*63;
+        final int a = 63 * 63;
         assertEquals(a, foo2.length);
     }
 }
