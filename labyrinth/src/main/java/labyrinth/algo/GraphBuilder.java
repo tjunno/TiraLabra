@@ -17,7 +17,7 @@ public final class GraphBuilder {
     }
 
     /**.
-     * THE GraphBuilder
+     * THE GraphBuilder builds from the map file
      *
      * @param f map file
      * @return graph
@@ -33,11 +33,11 @@ public final class GraphBuilder {
         String[] split = line.split(" ");
         Integer x = Integer.valueOf(split[0]);
         Integer y = Integer.valueOf(split[1]);
-        String readline;
+        String rl;
         int n = 0;
         char[][] laby = new char[x][y];
-        while ((readline = read.readLine()) != null) {
-            char[] ch = readline.toCharArray();
+        while ((rl = read.readLine()) != null) {
+            char[] ch = rl.toCharArray();
             for (int i = 0; i < ch.length; i++) {
                 laby[i][n] = ch[i];
             }
@@ -53,8 +53,6 @@ public final class GraphBuilder {
                 if (c == cc) {
                     addWeights(node, laby, x, y);
                 }
-                //if (c==cc) addWeights(node, x, y);
-
                 g[i * x + j] = node;
             }
         }
@@ -62,8 +60,7 @@ public final class GraphBuilder {
     }
 
     /**.
-     * * Very classy way to add weights 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
-     * 16 17 18 19 20 21 22 23 24
+     * * Very classy way to add weights
      *
      * @param node The node which gonna be stuffed with weights
      * @param c map

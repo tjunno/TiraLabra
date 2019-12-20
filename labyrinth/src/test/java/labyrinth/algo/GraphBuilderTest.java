@@ -25,6 +25,11 @@ public class GraphBuilderTest {
      */
     private Node[] foo2;
     /**
+     * . foo3
+     */
+    private Node[] foo3;
+
+    /**
      * . GraphBuilderTest
      */
     public GraphBuilderTest() {
@@ -56,6 +61,9 @@ public class GraphBuilderTest {
 
         foo2 = GraphBuilder.builder(new File(
                 "src/test/resources/labyrinth/testi3.txt"));
+
+        foo3 = GraphBuilder.builder(new File(
+                "src/test/resources/labyrinth/testi4.txt"));
     }
 
     /**
@@ -83,5 +91,15 @@ public class GraphBuilderTest {
         System.out.println("GraphBuilder");
         final int a = 63 * 63;
         assertEquals(a, foo2.length);
+    }
+
+    /**
+     * Test of GraphBuilder method, of class GraphBuilder.
+     */
+    @Test
+    public void testGraphBuilder3() {
+        System.out.println("GraphBuilder");
+        final var a = 139 * 139;
+        assertEquals(a, foo3.length);
     }
 }

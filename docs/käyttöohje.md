@@ -6,6 +6,8 @@ Ohjelma ajetaan kirjoittamalla komentorivillä: ./gradlew run
 Testit ajetaan komennolla: ./gradlew test
 JacocoRaportit ajetaan komennolla: ./gradlew jacocoTestReport
 
+Toiminnallisuuksia käytetään valitsemalla jokin ohjelman ehdottama numero.
+
 ## Minkä muotoisia syötteitä ohjelma hyväksyy
 
-## Missä hakemistossa on jar ja ajamiseen tarvittavat testitiedostot
+Ohjelma ottaa vastaan tiedoston (toteutettu sisäisesti ilman vapaata valintaa).

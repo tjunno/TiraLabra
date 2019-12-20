@@ -76,7 +76,7 @@ import labyrinth.struct.MinHeap;
 
 public class Astar {
     /**.
-     * AStar algorithm for searching (under construction)
+     * AStar algorithm for searching
      *
      * @param map map
      * @param start start
@@ -95,9 +95,6 @@ public class Astar {
             path[i] = -1;
         }
         tostart[start] = 0;
-        //PriorityQueue<Anode> prio =
-        //new PriorityQueue<>(map.length, new AComp(map[end].getX(),
-        //map[end].getY()));
         MinHeap<Anode> prio = new MinHeap<>(map.length,
         new AComp(map[end].getX(), map[end].getY()));
         prio.add(new Anode(start, tostart[start],
