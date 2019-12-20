@@ -49,8 +49,10 @@ public class AstarTest {
     @Before
     public void setUp() throws IOException {
 
-        foo = GraphBuilder.builder(new File("src/test/resources/testi.txt"));
-        foo2 = GraphBuilder.builder(new File("src/test/resources/testi2.txt"));
+        foo = GraphBuilder.builder(new File(
+                "src/test/resources/labyrinth/testi.txt"));
+        foo2 = GraphBuilder.builder(new File(
+                "src/test/resources/labyrinth/testi2.txt"));
 
     }
      /**
