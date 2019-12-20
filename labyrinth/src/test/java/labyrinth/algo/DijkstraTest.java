@@ -88,7 +88,7 @@ public class DijkstraTest {
     }
 
     /**.
-     * Test failing of search method, of class Dijkstra.
+     * Test of search method, of class Dijkstra.
      */
     @Test
     public void testSearchSame() {
